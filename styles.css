@@ -1,0 +1,39 @@
+/* File: ./styles.css */
+
+.logos a {
+  text-decoration: none;
+}
+
+.logo {
+  height: 200px;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #00d8ff);
+}
+
+.logo.bootstrap:hover {
+  filter: drop-shadow(0 0 2em #6f10f4);
+}
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #ff00dd);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

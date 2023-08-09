@@ -1,0 +1,44 @@
+// Buttons. See [mixins/_buttons.scss]
+//   btn-variant-mixin(backbround: $theme-colors[color], text: color-contrast(backbround))
+// tint-color(): mix color with white
+// shade-color(): mix color with black
+
+// See: [_variables.scss] theme-color-variables
+$react:     $cyan;
+$bootstrap: $indigo;
+
+// See: [_variables.scss] theme-text-variables
+$react-text-emphasis:          shade-color($react, 60%) !default;
+$react-text-emphasis-dark:     tint-color($react, 40%) !default;
+$bootstrap-text-emphasis:      shade-color($bootstrap, 40%) !default;
+$bootstrap-text-emphasis-dark: tint-color($bootstrap, 60%) !default;
+
+// See: [_variables.scss] theme-bg-subtle-variables
+$react-bg-subtle:              tint-color($react, 80%) !default;
+$react-bg-subtle-dark:         shade-color($react, 80%) !default;
+$bootstrap-bg-subtle:          tint-color($bootstrap, 60%) !default;
+$bootstrap-bg-subtle-dark:     shade-color($bootstrap, 60%) !default;
+
+// See: [_variables.scss] theme-border-subtle-variables
+$react-border-subtle:          tint-color($react, 60%) !default;
+$react-border-subtle-dark:     shade-color($react, 40%) !default;
+$bootstrap-border-subtle:      tint-color($bootstrap, 40%) !default;
+$bootstrap-border-subtle-dark: tint-color($bootstrap, 20%) !default;
+
+// // See: [_variables.scss] theme-text-variables
+// $react-text-emphasis:          $cyan-800;
+// $react-text-emphasis-dark:     $cyan-300;
+// $bootstrap-text-emphasis:      $indigo-800;
+// $bootstrap-text-emphasis-dark: $indigo-300;
+
+// // See: [_variables.scss] theme-bg-subtle-variables
+// $react-bg-subtle:              $cyan-300;
+// $react-bg-subtle-dark:         $cyan-900;
+// $bootstrap-bg-subtle:          $indigo-300;
+// $bootstrap-bg-subtle-dark:     $indigo-900;
+
+// // See: [_variables.scss] theme-border-subtle-variables
+// $react-border-subtle:          $cyan-500;
+// $react-border-subtle-dark:     $cyan-500;
+// $bootstrap-border-subtle:      $indigo-500;
+// $bootstrap-border-subtle-dark: $indigo-500;

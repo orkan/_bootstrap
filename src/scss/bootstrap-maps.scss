@@ -1,0 +1,116 @@
+@import "./bootstrap-variables";
+
+// ----------------------------------------------------------------------------
+// Create: [--bs-???] CSS variables
+// --bs-react
+// --bs-bootstrap
+// See: [_variables.scss] theme-colors-map
+$ork-theme-colors: (
+  "react":     $react,
+  "bootstrap": $bootstrap,
+);
+$theme-colors: map-merge($theme-colors, $ork-theme-colors);
+
+// ----------------------------------------------------------------------------
+// Create: [--bs-???-text-emphasis] CSS variables
+// --bs-react-text-emphasis
+// --bs-bootstrap-text-emphasiss
+// See: [_maps.scss] theme-text-map
+$ork-theme-colors-text: (
+  "react":     $react-text-emphasis,
+  "bootstrap": $bootstrap-text-emphasis,
+);
+$theme-colors-text: map-merge($theme-colors-text, $ork-theme-colors-text);
+
+// Create: [.text-???-emphasis] CSS classes
+// .text-react-emphasis
+// .text-bootstrap-emphasis
+// See: [_maps.scss] utilities-text-colors
+$ork-utilities-text-emphasis-colors: (
+  "react-emphasis": var(--#{$prefix}react-text-emphasis),
+  "bootstrap-emphasis": var(--#{$prefix}bootstrap-text-emphasis),
+);
+$utilities-text-emphasis-colors: map-merge(
+  $utilities-text-emphasis-colors,
+  $ork-utilities-text-emphasis-colors
+);
+
+// ----------------------------------------------------------------------------
+// Create: [--bs-???-bg-subtle] CSS variables
+// --bs-react-bg-subtle
+// --bs-bootstrap-bg-subtle
+// See: [_maps.scss] theme-bg-subtle-map
+$ork-theme-colors-bg-subtle: (
+  "react": $react-bg-subtle,
+  "bootstrap": $bootstrap-bg-subtle,
+);
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $ork-theme-colors-bg-subtle);
+
+// Create: [.bg-???-subtle] CSS classes
+// .bg-react-subtle
+// .bg-bootstrap-subtle
+// See: [_maps.scss] utilities-bg-colors
+$ork-utilities-bg-subtle: (
+  "react-subtle": var(--#{$prefix}react-bg-subtle),
+  "bootstrap-subtle": var(--#{$prefix}bootstrap-bg-subtle),
+);
+$utilities-bg-subtle: map-merge($utilities-bg-subtle, $ork-utilities-bg-subtle);
+
+// ----------------------------------------------------------------------------
+// Create: [--bs-???-border-subtle] CSS variables
+// --bs-react-border-subtle
+// --bs-bootstrap-border-subtle
+// See: [_maps.scss] theme-border-subtle-map
+$ork-theme-colors-border-subtle: (
+  "react": $react-border-subtle,
+  "bootstrap": $bootstrap-border-subtle,
+);
+$theme-colors-border-subtle: map-merge(
+  $theme-colors-border-subtle,
+  $ork-theme-colors-border-subtle
+);
+
+// Create: [.border-???-subtle] CSS classes
+// .border-react-subtle
+// .border-bootstrap-subtle
+// See: [_maps.scss] utilities-border-colors
+$ork-utilities-border-subtle: (
+  "react-subtle": var(--#{$prefix}react-border-subtle),
+  "bootstrap-subtle": var(--#{$prefix}bootstrap-border-subtle),
+);
+$utilities-border-subtle: map-merge($utilities-border-subtle, $ork-utilities-border-subtle);
+
+// ============================================================================
+// :root, [data-bs-theme=dark] { ... }
+// ============================================================================
+@if $enable-dark-mode {
+  // --------------------------------------------------------------------------
+  // See: [_maps.scss] theme-text-dark-map
+  // --bs-react-text-emphasis
+  // --bs-bootstrap-text-emphasis
+  $ork-theme-colors-text-dark: (
+    "react": $react-text-emphasis-dark,
+    "bootstrap": $bootstrap-text-emphasis-dark,
+  );
+  $theme-colors-text-dark: map-merge($theme-colors-text-dark, $ork-theme-colors-text-dark);
+    
+  // --------------------------------------------------------------------------
+  // See: [_maps.scss] theme-bg-subtle-dark-map
+  // --bs-react-bg-subtle
+  // --bs-bootstrap-bg-subtle
+  $ork-theme-colors-bg-subtle-dark: (
+    "react": $react-bg-subtle-dark,
+    "bootstrap": $bootstrap-bg-subtle-dark,
+  );
+  $theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $ork-theme-colors-bg-subtle-dark);
+    
+  // --------------------------------------------------------------------------
+  // See: [_maps.scss] theme-border-subtle-dark-map
+  // --bs-react-border-subtle
+  // --bs-bootstrap-border-subtle
+  $ork-theme-colors-border-subtle-dark: (
+    "react": $react-border-subtle-dark,
+    "bootstrap": $bootstrap-border-subtle-dark,
+  );
+  $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $ork-theme-colors-border-subtle-dark);
+}

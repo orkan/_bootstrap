@@ -1,17 +1,25 @@
-<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#the_recipe -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#alternate_method -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Sticky footer: Grid</title>
+    <title>1. Flexbox - sticky footer</title>
   </head>
   <body>
     <style>
       .wrapper {
+        display: flex;
+        flex-direction: column;
         min-height: 100%;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+      }
+      .page-header,
+      .page-footer {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+      .page-body {
+        flex-grow: 1;
       }
     </style>
 

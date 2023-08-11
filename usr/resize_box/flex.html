@@ -3,35 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Grow: x, y</title>
+    <title>2. Resize box (flex)</title>
   </head>
   <body>
-    <code>
-      https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1
-      https://stackoverflow.com/questions/25311541/how-to-vertically-align-text-inside-a-flexbox
-    </code>
     <style>
-      .continer {
-        min-width: 600px;
-      }
-      .continer > div {
-        margin-bottom: 5px;
-      }
-
       .wrapper {
         display: flex; /* needed for aligning the items */
         gap: 5px;
       }
-
       .wrapper > div {
+        aspect-ratio: 1 / 1;
         display: flex; /* needed for aligning the contents */
+        flex: 1; /* control item size: grow, shrink, base */
         align-items: center;
         justify-content: center;
-        flex: 1; /* control item size: grow, shrink, base */
-        aspect-ratio: 1 / 1;
-        /* 
-        min-width: 50px; <- not needed since the parent holds min-width
-        */
       }
     </style>
 
@@ -53,5 +38,10 @@
         <div>check</div>
       </div>
     </div>
+
+    <code>
+      https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1
+      https://stackoverflow.com/questions/25311541/how-to-vertically-align-text-inside-a-flexbox
+    </code>
   </body>
 </html>

@@ -1,0 +1,16 @@
+.continer {
+  padding: 1em;
+  min-width: 600px;
+  border-radius: 5px;
+  border: 2px solid #f76707;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  margin-bottom: 5px;
+  padding: 1em;
+  color: #d9480f;
+  border-radius: 5px;
+  border: 2px solid #ffa94d;
+  background-color: #fad29e;
+}

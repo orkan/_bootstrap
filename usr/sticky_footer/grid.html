@@ -1,0 +1,44 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#the_recipe -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>2. Grid - sticky footer</title>
+  </head>
+  <body>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100%;
+      }
+    </style>
+    
+    <div class="wrapper">
+      <header class="page-header">This is the header</header>
+      <main class="page-body">
+        <p>
+          Main page content here, add more if you want to see the footer push
+          down. Main page content here, add more if you want to see the footer
+          push down. Main page content here, add more if you want to see the
+          footer push down. Main page content here, add more if you want to see
+          the footer push down. Main page content here, add more if you want to
+          see the footer push down. Main page content here, add more if you want
+          to see the footer push down. Main page content here, add more if you
+          want to see the footer push down. Main page content here, add more if
+          you want to see the footer push down. Main page content here, add more
+          if you want to see the footer push down. Main page content here, add
+          more if you want to see the footer push down. Main page content here,
+          add more if you want to see the footer push down. Main page content
+          here, add more if you want to see the footer push down. Main page
+          content here, add more if you want to see the footer push down. Main
+          page content here, add more if you want to see the footer push down.
+          Main page content here, add more if you want to see the footer push
+          down.
+        </p>
+      </main>
+      <footer class="page-footer">Sticky footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.wrapper {
+  border-radius: 5px;
+  border: 2px solid #f76707;
+  background-color: #fff4e6;
+}
+.wrapper > * {
+  padding: 1em;
+  color: #d9480f;
+  border-radius: 5px;
+  border: 2px solid #ffa94d;
+  background-color: #fad29e;
+}
+.nested {
+  padding: 1em;
+  border-radius: 5px;
+  border: 2px solid #ffec99;
+  background-color: #fff9db;
+}
+ul {
+  list-style: none;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Grow: x, y</title>
+    <title>1. Resize box (grid)</title>
   </head>
   <body>
     <!-- https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1 -->
@@ -11,16 +11,14 @@
       .wrapper {
         display: grid;
         grid-template-columns: repeat(6, minmax(100px, 1fr));
+        gap: 5px;
         align-items: center;
         justify-content: center;
       }
       .wrapper > div {
         aspect-ratio: 1 / 1;
-        margin: 5px;
       }
     </style>
-
-    Grid: Unable to center cell content!
 
     <div class="continer">
       <div class="wrapper">
@@ -40,5 +38,10 @@
         <div>check</div>
       </div>
     </div>
+
+    <code>
+      Grid: Unable to center cell content!
+    </code>
+
   </body>
 </html>

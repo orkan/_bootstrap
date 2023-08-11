@@ -1,0 +1,24 @@
+.listing {
+  margin: 2em;
+}
+.listing li {
+  border-radius: 10px;
+  border: 1px solid #ffe066;
+}
+.listing li h2 {
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #ff9900;
+  border-radius: 10px 10px 0 0;
+}
+.listing .cta {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ffe066;
+}
+.listing .body {
+  padding: 10px;
+}

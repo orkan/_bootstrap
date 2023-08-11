@@ -1,4 +1,9 @@
 @echo off
-pushd %~dp0..
 
-sass src/scss/bootstrap.scss:bootstrap.css --watch --load-path node_modules
+setlocal
+pushd %~dp0..
+set NAME=%~1
+set CMD=sass src/%NAME%/scss/bootstrap.scss:src/%NAME%/bootstrap.css --watch --load-path node_modules
+
+echo %CMD%
+%CMD%

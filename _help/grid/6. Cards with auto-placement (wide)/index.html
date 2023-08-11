@@ -1,0 +1,98 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS Grid: A product listing with auto-placement</title>
+  </head>
+  <body>
+    <style>
+      .listing {
+        list-style: none;
+        margin: 2em;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-flow: dense;
+      }
+      .listing .wide {
+        grid-column-end: span 2;
+      }
+      .listing li {
+        border: 1px solid #ffe066;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .listing li h2 {
+        border-radius: 10px 10px 0 0;
+        margin-top: 0;
+        color: #fff;
+        background-color: #ff9900;
+        padding: 10px;
+        text-align: center;
+      }
+      .listing .cta {
+        margin-top: auto;
+        border-top: 1px solid #ffe066;
+        padding: 10px;
+        text-align: center;
+      }
+      .listing .body {
+        padding: 10px;
+      }
+    </style>
+
+    <ul class="listing">
+      <li>
+        <h2>Item One</h2>
+        <div class="body">
+          <p>The content of this listing item goes here.</p>
+        </div>
+        <div class="cta">
+          <a href="">Call to action!</a>
+        </div>
+      </li>
+      <li>
+        <h2>Item Two</h2>
+        <div class="body">
+          <p>The content of this listing item goes here.</p>
+        </div>
+        <div class="cta">
+          <a href="">Call to action!</a>
+        </div>
+      </li>
+      <li class="wide">
+        <h2>Item Three</h2>
+        <div class="body">
+          <p>The content of this listing item goes here.</p>
+          <p>This one has more text than the other items.</p>
+          <p>Quite a lot more</p>
+          <p>Perhaps we could do something different with it?</p>
+        </div>
+        <div class="cta">
+          <a href="">Call to action!</a>
+        </div>
+      </li>
+      <li>
+        <h2>Item Four</h2>
+        <div class="body">
+          <p>The content of this listing item goes here.</p>
+        </div>
+        <div class="cta">
+          <a href="">Call to action!</a>
+        </div>
+      </li>
+      <li>
+        <h2>Item Five</h2>
+        <div class="body">
+          <p>The content of this listing item goes here.</p>
+        </div>
+        <div class="cta">
+          <a href="">Call to action!</a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

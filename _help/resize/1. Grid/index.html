@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Grow: x, y</title>
+  </head>
+  <body>
+    <!-- https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1 -->
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(100px, 1fr));
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper > div {
+        aspect-ratio: 1 / 1;
+        margin: 5px;
+      }
+    </style>
+
+    Grid: Unable to center cell content!
+
+    <div class="continer">
+      <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>check</div>
+      </div>
+      <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>check</div>
+      </div>
+    </div>
+  </body>
+</html>

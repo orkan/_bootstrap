@@ -1,0 +1,100 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS Grid: A responsive layout with 1 to 3 fluid columns using grid-template-areas</title>
+  </head>
+  <body>
+    <style>
+      .wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+          "header"
+          "nav"
+          "content"
+          "sidebar"
+          "ad"
+          "footer";
+      }
+      .main-head {
+        grid-area: header;
+      }
+      .content {
+        grid-area: content;
+      }
+      .main-nav {
+        grid-area: nav;
+      }
+      .side {
+        grid-area: sidebar;
+      }
+      .ad {
+        grid-area: ad;
+      }
+      .main-footer {
+        grid-area: footer;
+      }
+
+      @media (min-width: 500px) {
+        .wrapper {
+          grid-template-columns: 1fr 2fr;
+          grid-template-areas:
+            "header  header"
+            "nav     nav"
+            "sidebar content"
+            "ad      footer";
+        }
+        nav ul {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 700px) {
+        .wrapper {
+          grid-template-columns: 1fr 4fr 1fr;
+          grid-template-areas:
+            "header  header  header"
+            "nav     content sidebar"
+            "nav     content ad"
+            "footer  footer  footer";
+        }
+        nav ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <img
+      src="11-responsive-areas.png"
+      alt="A responsive layout with 1 to 3 fluid columns using grid-template-areas"
+    />
+
+    <div class="wrapper">
+      <header class="main-head">The header</header>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="">Nav 1</a></li>
+          <li><a href="">Nav 2</a></li>
+          <li><a href="">Nav 3</a></li>
+        </ul>
+      </nav>
+      <article class="content">
+        <h1>Main article area</h1>
+        <p>
+          In this layout, we display the areas in source order for any screen
+          less that 500 pixels wide. We go to a two column layout, and then to a
+          three column layout by redefining the grid, and the placement of items
+          on the grid.
+        </p>
+      </article>
+      <aside class="side">Sidebar</aside>
+      <div class="ad">Advertising</div>
+      <footer class="main-footer">The footer</footer>
+    </div>
+
+  </body>
+</html>

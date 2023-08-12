@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css" />
-    <title>1. Resize box (grid)</title>
+    <title>2. Resize box (flex)</title>
   </head>
   <body>
-    <!-- https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1 -->
     <style>
       .wrapper {
-        display: grid;
-        grid-template-columns: repeat(6, minmax(100px, 1fr));
+        display: flex; /* needed for aligning the items */
         gap: 5px;
-        align-items: center;
-        justify-content: center;
       }
       .wrapper > div {
         aspect-ratio: 1 / 1;
+        display: flex; /* needed for aligning the contents */
+        flex: 1; /* control item size: grow, shrink, base */
+        align-items: center;
+        justify-content: center;
       }
     </style>
 
-    <div class="continer">
+    <div class="container">
       <div class="wrapper">
         <div>1</div>
         <div>2</div>
@@ -42,8 +42,8 @@
     </div>
 
     <code>
-      Grid: Unable to center cell content!
+      https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css?noredirect=1&lq=1
+      https://stackoverflow.com/questions/25311541/how-to-vertically-align-text-inside-a-flexbox
     </code>
-
   </body>
 </html>

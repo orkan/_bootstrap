@@ -1,0 +1,23 @@
+// Idea:
+// Replace "unused" btn colors instead of extending theme-colors maps
+// https://getbootstrap.com/docs/5.3/customize/color/#theme-colors
+
+// See: [_variables.scss] theme-color-variables
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;   // <button class="btn btn-info">React button</button>
+// $warning:       $yellow !default; // <button class="btn btn-warning">Storybook button</button>
+$danger: #6610f2;                  // <button class="btn btn-danger">Bootstrap button</button>
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+
+// See: [_variables.scss] theme-bg-subtle-variables
+$danger-text-emphasis:      shade-color($danger, 40%);
+$danger-bg-subtle:          tint-color($danger, 60%);
+$danger-border-subtle:      tint-color($danger, 40%);
+
+// See: [_variables-dark.scss] theme-bg-subtle-dark-variables
+$danger-text-emphasis-dark: tint-color($danger, 60%);
+$danger-bg-subtle-dark:     shade-color($danger, 60%);
+$danger-border-subtle-dark: tint-color($danger, 20%);

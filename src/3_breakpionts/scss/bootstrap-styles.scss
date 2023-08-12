@@ -1,0 +1,14 @@
+
+/**
+ * See: [./scss/bootstrap-styles.scss]
+ * Example: Hide at `min-width: 0`, and then show at `sm` breakpoint
+ */
+.ork-hide-xs {
+  display: none;
+  color: red;
+}
+@include media-breakpoint-up(sm) {
+  .ork-hide-xs {
+    display: revert;
+  }
+}

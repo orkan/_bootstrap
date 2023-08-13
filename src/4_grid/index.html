@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <title>4. Grid</title>
+  </head>
+  <body class="">
+    <style>
+      .example-content-main2 {
+        background-color: var(--bs-primary-bg-subtle);
+      }
+      .example-content-secondary2 {
+        background-color: var(--bs-secondary-bg-subtle);
+      }
+    </style>
+
+    <div class="example-container">
+      <div class="example-row">
+        <div class="example-content-main">Main content</div>
+        <div class="example-content-secondary">Secondary content</div>
+      </div>
+    </div>
+
+    <p>
+      <a href="https://getbootstrap.com/docs/5.3/layout/grid/#example-usage"
+        >BS: Layout > Grid</a
+      >
+    </p>
+
+    <p>
+      <code>
+        <pre>
+/**
+* See: [./scss/bootstrap-styles.scss]
+* Example: Using the default settings to create a two-column layout with a gap between.
+*/
+.example-container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+}
+
+.example-row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.example-content-main {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+@media (min-width: 576px) {
+  .example-content-main {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .example-content-main {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+}
+
+.example-content-secondary {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+@media (min-width: 576px) {
+  .example-content-secondary {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .example-content-secondary {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+    </pre
+        >
+      </code>
+    </p>
+  </body>
+</html>

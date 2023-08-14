@@ -1,3 +1,9 @@
+// Merge some BS classes for custom use
+.ork-summary {
+  @extend .mx-1;
+  @extend .p-3;
+}
+
 /**
  * See: [./scss/bootstrap-styles.scss]
  * Example: Using the default settings to create a two-column layout with a gap between.

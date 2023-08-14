@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>7. BS: Horizontal &amp; vertical gutters</title>
+  </head>
+  <body class="m-4">
+    <style>
+      .row > div {
+        border-radius: 0;
+        border: 2px solid #61335b;
+        background-color: #e279d4;
+      }
+      .row > div > div {
+        color: #d5e3ee;
+        border-radius: 0;
+        border: 2px solid #163c5a;
+        background-color: #58a3e0;
+      }
+    </style>
+
+    <div class="container text-center wrapper">
+      <div class="row g-2">
+        <div class="col-6">
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      <a
+        href="https://getbootstrap.com/docs/5.3/layout/gutters/#horizontal--vertical-gutters"
+        >https://getbootstrap.com/docs/5.3/layout/gutters/#horizontal--vertical-gutters</a
+      >
+    </p>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+.wrapper {
+  border: 2px solid #f76707;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  color: #d9480f;
+  border: 2px solid #ffa94d;
+  background-color: #fad29e;
+}
+
+.nested, .row > div {
+  color: #d9480f;
+  border-radius: 10px;
+  border: 2px solid #ffec99;
+  /* background-color: #fff9db; */
+}
+
+/*
+ * Extract some BS classes to later join in custom CSS classes.
+ * https://getbootstrap.com/docs/5.3/utilities/api/
+ */
+
+// ----------------------------------------------------------------------------
+// See [bootstrap/scss/bootstrap-utilities]:
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+// ----------------------------------------------------------------------------
+
+// Choose maps ($utilities) to render CSS classes from
+// https://getbootstrap.com/docs/5.3/utilities/api/#property
+// $utilities: (
+//   "margin-x": (
+//     responsive: true,
+//     property: margin-right margin-left,
+//     class: mx,
+//     values: map-merge($spacers, (auto: auto))
+//   ),
+//   "padding": (
+//     responsive: true,
+//     property: padding,
+//     class: p,
+//     values: $spacers
+//   ),
+// ),
+// "margin-x" => .mx-1, .mx-2, etc...s
+// "padding"  => .p1, p3, etc...
+// ----------------------
+// Example: spacing utilities
+// https://getbootstrap.com/docs/5.3/utilities/spacing/#sass-utilities-api
+
+// Reduce rendered BS classes. 
+// Discard extra @media {...} output with [responsive: false] prop
+@import "../src/scss/functions";
+$utilities: ork-map-extract($utilities, ( responsive: false ), "margin-x", "padding" );
+// @debug $utilities;
+
+// Layout & components
+// @import "bootstrap/scss/root";
+
+// Helpers
+// @import "bootstrap/scss/helpers";
+
+// Utilities - generate CSS classes from [$utilities] map
+@import "bootstrap/scss/utilities/api";
+
+// Merge CSS classes
+.ork-summary {
+  @extend .mx-1;
+  @extend .p-3;
+}

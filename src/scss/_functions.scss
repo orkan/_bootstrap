@@ -1,0 +1,23 @@
+// Reduce map
+@function ork-map-reduce($map, $keys...) {
+  $out: ();
+  @each $k in $keys {
+    $v: map-get($map, $k);
+    @if ($v != null) {
+      $out: map-merge($out, ($k: $v));
+    }
+  }
+  @return $out;
+}
+
+// Extract reduced map with updated props
+@function ork-map-extract($map, $props, $keys...) {
+  $out: ();
+  @each $k in $keys {
+    $v: map-get($map, $k);
+    @if ($v != null) {
+      $out: map-merge($out, ($k: map-merge( $v, $props )));
+    }
+  }
+  @return $out;
+}

@@ -1,12 +1,14 @@
 @echo off
 
+REM Change global CWD path!
+pushd %~dp0..
+
 setlocal
 call :setBasename %~dp1
-
-pushd %~dp0..
 set CMD=sass src/%BASENAME%/scss/bootstrap.scss:src/%BASENAME%/bootstrap.css --watch --load-path node_modules
 
-echo %CMD%
+echo CWD: %CD%
+echo CMD: %CMD%
 %CMD%
 
 exit /b

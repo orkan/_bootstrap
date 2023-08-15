@@ -1,23 +1,4 @@
-.ork-container {
-  @extend .container-md;
-  @extend .p-3;
-}
-
-.ork-logos {
-  @extend .row;
-  // @extend .row-cols-3;
-  @extend .text-center;
-  & a {
-    text-decoration: none;
-  }
-}
-
-.ork-logo {
-  @extend .col;
-  // @extend .col-sm-6;
-  // @extend .col-lg-4;
-}
-
+// Define box colors
 .box {
   @extend .p-3;
   @extend .border;
@@ -42,11 +23,20 @@
   @extend .btn-danger;
 }
 
+.box-webpack {
+  @extend .text-light-emphasis;
+  @extend .bg-light-subtle;
+  @extend .border-light-subtle;
+}
+.btn-webpack {
+  @extend .btn-light;
+}
+
 .box-vite {
-  @extend .text-warning-emphasis;
-  @extend .bg-warning-subtle;
-  @extend .border-warning-subtle;
+  @extend .text-dark-emphasis;
+  @extend .bg-dark-subtle;
+  @extend .border-dark-subtle;
 }
 .btn-vite {
-  @extend .btn-warning;
+  @extend .btn-dark;
 }

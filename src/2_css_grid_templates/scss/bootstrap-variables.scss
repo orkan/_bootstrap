@@ -1,0 +1,39 @@
+// Idea:
+// Replace "unused" btn colors instead of extending theme-colors maps
+// https://getbootstrap.com/docs/5.3/customize/color/#theme-colors
+
+// See: [_variables.scss] theme-color-variables
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;   // <button class="btn btn-info">React button</button>
+// $warning:       $yellow !default;
+$danger:           #6f10f4;        // <button class="btn btn-danger">Bootstrap button</button>
+$light:            #1c78c0;        // <button class="btn btn-light">Webpack button</button>
+$dark:             #ad48fe;        // <button class="btn btn-dark">Vite button</button>
+
+// See: [_variables.scss] theme-bg-subtle-variables
+$danger-text-emphasis:      shade-color($danger, 40%); // Bootstrap
+$danger-bg-subtle:          tint-color($danger, 60%);
+$danger-border-subtle:      tint-color($danger, 40%);
+
+$light-text-emphasis:       shade-color($light, 40%); // Webpack
+$light-bg-subtle:           tint-color($light, 60%);
+$light-border-subtle:       tint-color($light, 40%);
+
+$dark-text-emphasis:        shade-color($danger, 40%); // Vite
+$dark-bg-subtle:            tint-color($danger, 60%);
+$dark-border-subtle:        tint-color($danger, 40%);
+
+// See: [_variables-dark.scss] theme-bg-subtle-dark-variables
+$danger-text-emphasis-dark: tint-color($danger, 60%); // Bootstrap
+$danger-bg-subtle-dark:     shade-color($danger, 60%);
+$danger-border-subtle-dark: tint-color($danger, 20%);
+
+$light-text-emphasis-dark:  tint-color($light, 60%); // Webpack
+$light-bg-subtle-dark:      shade-color($light, 60%);
+$light-border-subtle-dark:  tint-color($light, 20%);
+
+$dark-text-emphasis-dark:   tint-color($dark, 60%); // Vite
+$dark-bg-subtle-dark:       shade-color($dark, 60%);
+$dark-border-subtle-dark:   tint-color($dark, 20%);

@@ -1,0 +1,8 @@
+// Extend styles
+.see-also article {
+  @extend .float-start;
+  @extend .px-3;
+}
+.see-also header {
+  font-weight: bold;
+}

@@ -1,0 +1,47 @@
+// Define page layout with CSS grid templates + BS breakpoints
+
+// Width: 0 - 576px (xs - Extra small)
+.ork-logos {
+  @extend .mb-3;
+  @extend .text-center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "react"
+    "bs"
+    "webpack";
+  gap: 20px;
+}
+
+// Width: 576px - 768px (sm - Small)
+@include media-breakpoint-up(sm) {
+  .ork-logos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "react    bs"
+      "webpack  .";
+  }
+}
+
+// Width: 768px - 992px (lg - Large)
+@include media-breakpoint-up(lg) {
+  .ork-logos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "react bs webpack";
+  }
+}
+
+// Define templates
+.ork-logo-react {
+  grid-area: react;
+}
+.ork-logo-bootstrap {
+  grid-area: bs;
+}
+.ork-logo-vite {
+  grid-area: vite;
+}
+.ork-logo-webpack {
+  grid-area: webpack;
+}

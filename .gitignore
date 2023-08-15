@@ -3,7 +3,7 @@ assets
 bootstrap
 node_modules
 
-**/bootstrap.css
+# **/bootstrap.css
 *.map
 *.lnk
 *.qdr

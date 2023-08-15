@@ -1,0 +1,52 @@
+.ork-container {
+  @extend .container-md;
+  @extend .p-3;
+}
+
+.ork-logos {
+  @extend .row;
+  // @extend .row-cols-3;
+  @extend .text-center;
+  & a {
+    text-decoration: none;
+  }
+}
+
+.ork-logo {
+  @extend .col;
+  // @extend .col-sm-6;
+  // @extend .col-lg-4;
+}
+
+.box {
+  @extend .p-3;
+  @extend .border;
+  @extend .rounded-3;
+}
+
+.box-react {
+  @extend .text-info-emphasis;
+  @extend .bg-info-subtle;
+  @extend .border-info-subtle;
+}
+.btn-react {
+  @extend .btn-info;
+}
+
+.box-bootstrap {
+  @extend .text-danger-emphasis;
+  @extend .bg-danger-subtle;
+  @extend .border-danger-subtle;
+}
+.btn-bootstrap {
+  @extend .btn-danger;
+}
+
+.box-vite {
+  @extend .text-warning-emphasis;
+  @extend .bg-warning-subtle;
+  @extend .border-warning-subtle;
+}
+.btn-vite {
+  @extend .btn-warning;
+}

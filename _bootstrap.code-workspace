@@ -7,5 +7,9 @@
 			"path": "../orkan/ork-utils/usr/sass"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"livePreview.customExternalBrowser": "Firefox",
+		"livePreview.autoRefreshPreview": "On Changes to Saved Files",
+		"livePreview.portNumber": 7777
+	}
 }

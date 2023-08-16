@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <script src="main.js"></script>
+    <title>Form validation</title>
+  </head>
+  <body class="continer p-4">
+
+    <form class="row g-3 mb-3 px-3 border rounded-3 needs-validation" novalidate>
+
+      <div class="col-md-4">
+        <label class="form-label" for="validationCustom01">Show feedback if: <b>valid</b></b></label>
+        <input class="form-control" type="text" id="validationCustom01" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label" for="validationCustom02">Show feedback if: <b>invalid</b></label>
+        <input class="form-control" type="text" id="validationCustom02" required>
+        <div class="invalid-feedback">Empty field.</div>
+      </div>
+
+      <div class="col-8">
+        <label class="form-label" for="validationCustom02">Show feedback on: <b>change</b></label>
+        <input class="form-control" type="text" id="validationCustom02" onInput="handleChange(event)" required>
+        <div class="valid-feedback">Good!</div>
+        <div class="invalid-feedback">--invalid--</div>
+      </div>
+    
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+          <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label> 
+          <div class="invalid-feedback">You must agree before submitting.</div>
+          <div class="valid-feedback">Thank you!</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        <p class="form-text">
+          <em>Note: Feedback messages shows up after first form submit.</em>
+        </p>
+      </div>
+
+    </form>
+
+    <details class="see-also">
+      <summary>See also:</summary>
+      <ul>
+        <li>https://getbootstrap.com/docs/5.3/forms/validation/</li>
+        <li>https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api</li>
+      </ul>
+    </details>
+
+  </body>
+</html>

@@ -10,8 +10,29 @@
   </head>
   <body>
     <div class="mx-auto p-3" style="max-width: 1200px" id="root">
-      <!-- React -->
+      <!-- Theme mode -->
+      <div class="mb-4 text-center">
+        <input
+          type="radio"
+          class="btn-check"
+          name="theme"
+          id="theme-light"
+          onClick="document.documentElement.setAttribute('data-bs-theme', 'light')"
+        />
+        <label class="btn" for="theme-light">Light</label>
+        <input
+          type="radio"
+          class="btn-check"
+          name="theme"
+          id="theme-dark"
+          onClick="document.documentElement.setAttribute('data-bs-theme', 'dark')"
+          checked
+        />
+        <label class="btn" for="theme-dark">Dark</label>
+      </div>
+
       <div class="ork-logos">
+        <!-- React -->
         <div class="ork-logo-react">
           <a href="https://reactjs.org">
             <img
@@ -25,6 +46,7 @@
             <button class="btn btn-react">React button</button>
           </div>
         </div>
+
         <!-- Bootstrap -->
         <div class="ork-logo-bootstrap">
           <a href="https://getbootstrap.com">
@@ -39,6 +61,7 @@
             <button class="btn btn-bootstrap">Bootstrap button</button>
           </div>
         </div>
+
         <!-- Webpack -->
         <div class="ork-logo-webpack">
           <a href="https://webpack.js.org"
@@ -124,6 +147,7 @@
           </ul>
         </article>
       </details>
+      <!-- details -->
     </div>
     <!-- container -->
   </body>

@@ -1,61 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <script src="main.js"></script>
-    <title>Form validation</title>
-  </head>
-  <body class="continer p-4">
+<html data-bs-theme="light">
 
-    <form class="row g-3 mb-3 px-3 border rounded-3 needs-validation" novalidate>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <script src="main.js"></script>
+  <title>Form validation</title>
+</head>
 
-      <div class="col-md-4">
-        <label class="form-label" for="validationCustom01">Show feedback if: <b>valid</b></b></label>
-        <input class="form-control" type="text" id="validationCustom01" required>
-        <div class="valid-feedback">Looks good!</div>
+<body class="continer p-4">
+
+  <!-- Theme mode -->
+  <div class="form-check form-switch mb-4 text-center">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchDark" style="float: none"
+      onClick="document.documentElement.setAttribute('data-bs-theme', this.checked ? 'dark' : 'light')" />
+    <label class="form-check-label" for="switchDark">Dark theme</label>
+  </div>
+
+  <form class="row g-3 mb-3 p-3 border rounded-3 needs-validation" novalidate>
+
+    <div class="col-12 alert alert-info alert-dismissible fade show" role="alert">
+      <strong>Note:</strong> Feedback messages appear after submitting the form.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="validationCustom01">Show feedback if: <b>valid</b></label>
+      <input class="form-control" type="text" id="validationCustom01" required>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="validationCustom02">Show feedback if: <b>invalid</b></label>
+      <input class="form-control" type="text" id="validationCustom02" required>
+      <div class="invalid-feedback">Empty field.</div>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label" for="validationCustom02">Show feedback on: <b>change</b></label>
+      <input class="form-control" type="text" id="validationCustom02" onInput="handleChange(event)" required>
+      <div class="valid-feedback">Good!</div>
+      <div class="invalid-feedback">--invalid--</div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+        <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+        <div class="invalid-feedback">You must agree before submitting.</div>
+        <div class="valid-feedback">Thank you!</div>
       </div>
+    </div>
 
-      <div class="col-md-4">
-        <label class="form-label" for="validationCustom02">Show feedback if: <b>invalid</b></label>
-        <input class="form-control" type="text" id="validationCustom02" required>
-        <div class="invalid-feedback">Empty field.</div>
-      </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
 
-      <div class="col-8">
-        <label class="form-label" for="validationCustom02">Show feedback on: <b>change</b></label>
-        <input class="form-control" type="text" id="validationCustom02" onInput="handleChange(event)" required>
-        <div class="valid-feedback">Good!</div>
-        <div class="invalid-feedback">--invalid--</div>
-      </div>
-    
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-          <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label> 
-          <div class="invalid-feedback">You must agree before submitting.</div>
-          <div class="valid-feedback">Thank you!</div>
-        </div>
-      </div>
+  </form>
 
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
-        <p class="form-text">
-          <em>Note: Feedback messages shows up after first form submit.</em>
-        </p>
-      </div>
+  <details class="see-also">
+    <summary>See also:</summary>
+    <ul>
+      <li>https://getbootstrap.com/docs/5.3/forms/validation/</li>
+      <li>https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api</li>
+    </ul>
+  </details>
 
-    </form>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
 
-    <details class="see-also">
-      <summary>See also:</summary>
-      <ul>
-        <li>https://getbootstrap.com/docs/5.3/forms/validation/</li>
-        <li>https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api</li>
-      </ul>
-    </details>
-
-  </body>
 </html>

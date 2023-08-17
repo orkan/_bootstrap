@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-    <title>new</title>
-  </head>
-  <body>
-    <style>
-    </style>
+<html data-bs-theme="light">
 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>new</title>
+</head>
 
-  </body>
+<body>
+  <style></style>
+
+  <!-- Theme mode -->
+  <div class="form-check form-switch mb-4 text-center">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchDark" style="float: none"
+      onClick="document.documentElement.setAttribute('data-bs-theme', this.checked ? 'dark' : 'light')" />
+    <label class="form-check-label" for="switchDark">Dark theme</label>
+  </div>
+
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
 </html>

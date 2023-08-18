@@ -9,7 +9,8 @@
   background-color: #fad29e;
 }
 
-.nested, .row > div {
+.nested,
+.row > div {
   color: #d9480f;
   border-radius: 10px;
   border: 2px solid #ffec99;

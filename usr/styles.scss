@@ -9,7 +9,8 @@
   background-color: #fad29e;
 }
 
-.nested, .row > div {
+.nested,
+.row > div {
   color: #d9480f;
   border-radius: 10px;
   border: 2px solid #ffec99;
@@ -54,10 +55,20 @@
 // Example: spacing utilities
 // https://getbootstrap.com/docs/5.3/utilities/spacing/#sass-utilities-api
 
-// Reduce rendered BS classes. 
+// Reduce rendered BS classes.
 // Discard extra @media {...} output with [responsive: false] prop
 @import "../src/scss/functions";
-$utilities: ork-map-extract($utilities, ( responsive: false ), "margin-x", "padding", "padding-x", "float", "font-weight" );
+$utilities: ork-map-extract(
+  $utilities,
+  (
+    responsive: false,
+  ),
+  "margin-x",
+  "padding",
+  "padding-x",
+  "float",
+  "font-weight"
+);
 // @debug $utilities;
 
 // Layout & components

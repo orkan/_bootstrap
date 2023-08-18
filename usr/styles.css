@@ -25,7 +25,7 @@
   margin-left: 0 !important;
 }
 
-.mx-1, .ork-summary {
+.mx-1 {
   margin-right: 0.25rem !important;
   margin-left: 0.25rem !important;
 }
@@ -67,7 +67,7 @@
   padding: 0.5rem !important;
 }
 
-.p-3, .ork-summary {
+.p-3, .example-panel {
   padding: 1rem !important;
 }
 
@@ -77,6 +77,83 @@
 
 .p-5 {
   padding: 3rem !important;
+}
+
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.px-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.px-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.px-3, .see-also article {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.px-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.float-start, .see-also article {
+  float: left !important;
+}
+
+.float-end {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.fw-lighter {
+  font-weight: lighter !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.fw-bold, .see-also header {
+  font-weight: 700 !important;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.example-panel {
+  --example-panel-bg: var(--bs-body-bg);
+  background-color: var(--example-panel-bg);
+  margin-bottom: 1.25rem;
+  border-radius: var(--bs-border-radius);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,21 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../styles.css" />
   <title>new</title>
 </head>
 
-<body>
+<body class="container p-3" style="background-color: var(--bs-dark-bg-subtle);">
   <style></style>
 
   <!-- Theme mode -->
-  <div class="form-check form-switch mb-4 text-center">
-    <input class="form-check-input" type="checkbox" role="switch" id="switchDark" style="float: none"
+  <div class="form-switch mx-auto mb-3 p-0 text-center" style="color: var(--bs-dark-text-emphasis);">
+    <i class="bi bi-brightness-high"></i>
+    <input class="form-check-input mx-1" type="checkbox" role="button"
       onClick="document.documentElement.setAttribute('data-bs-theme', this.checked ? 'dark' : 'light')" />
-    <label class="form-check-label" for="switchDark">Dark theme</label>
+    <i class="bi bi-brightness-high-fill"></i>
   </div>
 
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Example panel -->
+  <h2>
+    <a href="https://getbootstrap.com/docs/5.3/components/navbar/">
+      Navbar
+    </a>
+  </h2>
+  <div class="example-panel d-flex align-items-stretch rounded">
+    <nav class="flex-column pe-3 border-end">nav</nav>
+    <div class="px-3">content</div>
+  </div>
+
+  <!-- See also -->
+  <details class="see-also" open>
+    <summary>See also:</summary>
+    <article>
+      <header>Bootstrap</header>
+      <ul>
+        <li><a href="https://getbootstrap.com">Bootstrap: 1</a></li>
+        <li><a href="https://getbootstrap.com">Bootstrap: 2</a></li>
+      </ul>
+    </article>
+    <article>
+      <header>Other</header>
+      <ul>
+        <li><a href="https://getbootstrap.com">Other: 1</a></li>
+        <li><a href="https://getbootstrap.com">Other: 2</a></li>
+      </ul>
+    </article>
+  </details>
+
+  <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>

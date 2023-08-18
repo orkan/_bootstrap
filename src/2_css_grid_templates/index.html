@@ -1,82 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>2. CSS Grid</title>
-  </head>
-  <body>
-    <div class="mx-auto p-3" style="max-width: 1200px" id="root">
-      <!-- Theme mode -->
-      <div class="mb-4 text-center">
-        <input
-          type="radio"
-          class="btn-check"
-          name="theme"
-          id="theme-light"
-          onClick="document.documentElement.setAttribute('data-bs-theme', 'light')"
-        />
-        <label class="btn" for="theme-light">Light</label>
-        <input
-          type="radio"
-          class="btn-check"
-          name="theme"
-          id="theme-dark"
-          onClick="document.documentElement.setAttribute('data-bs-theme', 'dark')"
-          checked
-        />
-        <label class="btn" for="theme-dark">Dark</label>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="bootstrap.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>2. CSS Grid</title>
+</head>
+
+<body>
+  <div class="mx-auto p-3" style="max-width: 1200px" id="root">
+    <!-- Theme mode -->
+    <div class="mb-4 text-center">
+      <input type="radio" class="btn-check" name="theme" id="theme-light"
+        onClick="document.documentElement.setAttribute('data-bs-theme', 'light')" />
+      <label class="btn" for="theme-light">Light</label>
+      <input type="radio" class="btn-check" name="theme" id="theme-dark"
+        onClick="document.documentElement.setAttribute('data-bs-theme', 'dark')" checked />
+      <label class="btn" for="theme-dark">Dark</label>
+    </div>
+
+    <div class="ork-logos">
+      <!-- React -->
+      <div class="ork-logo-react">
+        <a href="https://reactjs.org">
+          <img alt="React logo" class="logo react spin" src="../../assets/react/logo_react.svg" />
+        </a>
+        <div class="box box-react">
+          <h1>React</h1>
+          <button class="btn btn-react">React button</button>
+        </div>
       </div>
 
-      <div class="ork-logos">
-        <!-- React -->
-        <div class="ork-logo-react">
-          <a href="https://reactjs.org">
-            <img
-              alt="React logo"
-              class="logo react spin"
-              src="../../assets/react/logo_react.svg"
-            />
-          </a>
-          <div class="box box-react">
-            <h1>React</h1>
-            <button class="btn btn-react">React button</button>
-          </div>
+      <!-- Bootstrap -->
+      <div class="ork-logo-bootstrap">
+        <a href="https://getbootstrap.com">
+          <img alt="Bootstrap logo" class="logo bootstrap" src="../../assets/react/logo_bootstrap.svg" />
+        </a>
+        <div class="box box-bootstrap">
+          <h1>Bootstrap</h1>
+          <button class="btn btn-bootstrap">Bootstrap button</button>
         </div>
+      </div>
 
-        <!-- Bootstrap -->
-        <div class="ork-logo-bootstrap">
-          <a href="https://getbootstrap.com">
-            <img
-              alt="Bootstrap logo"
-              class="logo bootstrap"
-              src="../../assets/react/logo_bootstrap.svg"
-            />
-          </a>
-          <div class="box box-bootstrap">
-            <h1>Bootstrap</h1>
-            <button class="btn btn-bootstrap">Bootstrap button</button>
-          </div>
+      <!-- Webpack -->
+      <div class="ork-logo-webpack">
+        <a href="https://webpack.js.org"><img alt="Webpack logo" class="logo webpack"
+            src="../../assets/react/logo_webpack.svg" />
+        </a>
+        <div class="box box-webpack">
+          <h1>Webpack</h1>
+          <button class="btn btn-webpack">Webpack button</button>
         </div>
-
-        <!-- Webpack -->
-        <div class="ork-logo-webpack">
-          <a href="https://webpack.js.org"
-            ><img
-              alt="Webpack logo"
-              class="logo webpack"
-              src="../../assets/react/logo_webpack.svg"
-            />
-          </a>
-          <div class="box box-webpack">
-            <h1>Webpack</h1>
-            <button class="btn btn-webpack">Webpack button</button>
-          </div>
-        </div>
-        <!-- Vite
+      </div>
+      <!-- Vite
         <div class="ork-logo-vite">
           <a href="https://vitejs.dev"
             ><img
@@ -90,65 +69,50 @@
             <button class="btn btn-vite">Vite button</button>
           </div>
         </div> -->
-      </div>
-      <!-- class: ork-logos -->
-
-      <details class="see-also" open>
-        <summary>See also:</summary>
-
-        <article>
-          <header>Bootstrap</header>
-          <ul>
-            <li>
-              <a
-                href="https://getbootstrap.com/docs/5.3/customize/css-variables/"
-                >Bootstrap: CSS variables</a
-              >
-            </li>
-            <li>
-              <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/"
-                >Bootstrap: Breakpoints</a
-              >
-            </li>
-            <li>
-              <a href="https://getbootstrap.com/docs/5.3/layout/containers/"
-                >Bootstrap: Containers</a
-              >
-            </li>
-          </ul>
-        </article>
-
-        <article>
-          <header>Grid</header>
-          <ul>
-            <li>
-              <a href="https://getbootstrap.com/docs/5.3/layout/css-grid/"
-                >Bootstrap: CSS Grid</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout"
-                >Mozilla: Basic concepts of grid layout</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas"
-                >Mozilla: Grid template areas</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook"
-                >Mozilla: CSS Layout cookbook</a
-              >
-            </li>
-          </ul>
-        </article>
-      </details>
-      <!-- details -->
     </div>
-    <!-- container -->
-  </body>
+    <!-- class: ork-logos -->
+
+    <details class="see-also" open>
+      <summary>See also:</summary>
+
+      <article>
+        <header>Bootstrap</header>
+        <ul>
+          <li>
+            <a href="https://getbootstrap.com/docs/5.3/customize/css-variables/">Bootstrap: CSS variables</a>
+          </li>
+          <li>
+            <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/">Bootstrap: Breakpoints</a>
+          </li>
+          <li>
+            <a href="https://getbootstrap.com/docs/5.3/layout/containers/">Bootstrap: Containers</a>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <header>Grid</header>
+        <ul>
+          <li>
+            <a href="https://getbootstrap.com/docs/5.3/layout/css-grid/">Bootstrap: CSS Grid</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout">Mozilla:
+              Basic concepts of grid layout</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas">Mozilla: Grid
+              template areas</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook">Mozilla: CSS Layout cookbook</a>
+          </li>
+        </ul>
+      </article>
+    </details>
+    <!-- details -->
+  </div>
+  <!-- container -->
+</body>
+
 </html>

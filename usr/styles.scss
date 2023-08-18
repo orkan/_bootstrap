@@ -57,7 +57,7 @@
 // Reduce rendered BS classes. 
 // Discard extra @media {...} output with [responsive: false] prop
 @import "../src/scss/functions";
-$utilities: ork-map-extract($utilities, ( responsive: false ), "margin-x", "padding" );
+$utilities: ork-map-extract($utilities, ( responsive: false ), "margin-x", "padding", "padding-x", "float", "font-weight" );
 // @debug $utilities;
 
 // Layout & components
@@ -70,7 +70,40 @@ $utilities: ork-map-extract($utilities, ( responsive: false ), "margin-x", "padd
 @import "bootstrap/scss/utilities/api";
 
 // Merge CSS classes
-.ork-summary {
-  @extend .mx-1;
-  @extend .p-3;
+.see-also article {
+  @extend .float-start;
+  @extend .px-3;
 }
+.see-also header {
+  @extend .fw-bold;
+}
+
+.example-panel {
+  // Keep in sync with "Group list" which uses [--bs-body-bg] for bg!
+  --example-panel-bg: var(--bs-body-bg);
+  // Change with element style="--example-panel-bg: var(--bs-cyan)"
+  background-color: var(--example-panel-bg);
+  margin-bottom: 1.25rem;
+  @extend .p-3;
+  // See: .rounded
+  border-radius: var(--bs-border-radius);
+}
+
+// Too much! Use <i class="bi bi-icon"></i>
+// @font-face {
+//   font-family: "bootstrap-icons";
+//   src: url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2");
+// }
+// @import "bootstrap/scss/forms/form-check";
+// .theme-switch {
+//   font-family: bootstrap-icons !important;
+//   color: var(--bs-dark-text-emphasis);
+//   @extend .form-switch;
+//   @extend .mx-auto;
+//   @extend .mb-3;
+//   @extend .p-0;
+//   @extend .text-center;
+//   & ::before {
+//     content: "\F1D2";
+//   }
+// }

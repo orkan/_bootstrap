@@ -7,16 +7,18 @@
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles.css" />
   <title>Navs, Tabs, Scrollspy</title>
 </head>
 
 <body class="container p-3" style="background-color: var(--bs-dark-bg-subtle);">
   <style>
-    .my-panel {
-      /* background-color: var(--bs-light-bg-subtle); */
-      /* background-color: var(--bs-list-group-bg); moved to element's style="--bs-list-group-bg: var(--bs-light-bg-subtle) */
-      /* Keep in sync with "Group list" which uses [--bs-body-bg] for bg */
+    .example-panel {
+      /* 
+      background-color: var(--bs-light-bg-subtle);
+      background-color: var(--bs-list-group-bg); moved to element's style="--bs-list-group-bg: var(--bs-light-bg-subtle)
+      Keep in sync with "Group list" which uses [--bs-body-bg] for bg 
+      */
       background-color: var(--bs-body-bg);
       margin-bottom: 1.25rem;
       padding: 1rem; /* .p-3 */
@@ -24,7 +26,7 @@
     }
   </style>
 
-  <!-- Theme mode -->
+  <!-- Theme switch -->
   <div class="form-switch mx-auto mb-3 p-0 text-center" style="color: var(--bs-dark-text-emphasis);">
     <i class="bi bi-brightness-high"></i>
     <input class="form-check-input mx-1" type="checkbox" role="button"
@@ -38,7 +40,7 @@
       Tabs
     </a>
   </h2>
-  <div class="d-flex align-items-start p-3 rounded my-panel">
+  <div class="d-flex align-items-start p-3 rounded example-panel">
     <div class="nav flex-column nav-pills me-3 pe-3 border-end" role="tablist">
       <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab">Home</button>
       <button class="nav-link" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab">Profile</button>
@@ -76,7 +78,7 @@
       Scrollspy
     </a>
   </h2>
-  <div class="d-flex align-items-stretch rounded my-panel">
+  <div class="d-flex align-items-stretch rounded example-panel">
     <nav id="navbar-example3" class="nav nav-pills flex-column pe-3 text-center border-end">
       <a class="nav-link active" href="#list-item-1">Home</a>
       <a class="nav-link" href="#list-item-2">Profile</a>
@@ -88,7 +90,7 @@
       <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
       <h5 id="list-item-2">Profile</h5>
       <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-      <div class="opacity-25">
+      <div class="o-25">
         <h5 id="list-item-3">Disabled</h5>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
       </div>

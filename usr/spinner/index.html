@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <title>Spinner</title>
+</head>
+
+<body class="container p-3" style="min-width: 300px; background-color: var(--bs-dark-bg-subtle);">
+  <style></style>
+  <script>
+    function doAction(el) {
+      const oldHTML = el.innerHTML, elOut = document.querySelector("#out");
+      el.disabled = true;
+      el.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Loading...';
+      elOut.innerHTML = "wait...";
+      setTimeout(() => {
+        el.disabled = false;
+        el.innerHTML = oldHTML;
+        elOut.innerHTML = "Loaded: " + oldHTML;
+      }, 2000);
+    }
+  </script>
+
+  <!-- Theme switch -->
+  <div class="form-switch theme-switch d-flex gap-2 justify-content-center">
+    <i class="bi bi-brightness-high"></i>
+    <input class="form-check-input" type="checkbox" role="button"
+      onClick="document.documentElement.setAttribute('data-bs-theme', this.checked ? 'dark' : 'light')" />
+    <i class="bi bi-brightness-high-fill"></i>
+  </div>
+
+  <!-- Example panel -->
+  <h2 class="display-5">Button Spinners</a>
+  </h2>
+  <div class="example-panel d-flex align-items-stretch rounded">
+    <nav class="d-flex flex-column flex-shrink-0 gap-2 pe-3 border-end" style="width: 10rem">
+      <button class="btn btn-primary" type="button" onClick="doAction(this)">Button 1</button>
+      <button class="btn btn-warning" type="button" onClick="doAction(this)">Button 2</button>
+      <button class="btn btn-danger" type="button" onClick="doAction(this)">Button 3</button>
+      <button class="btn btn-outline-info" style="height: 4rem;" type="button" onClick="doAction(this)">Button Info Outlined</button>
+    </nav>
+    <div id="out" class="px-3">
+      content
+    </div>
+  </div>
+
+  <!-- See also -->
+  <details class="see-also">
+    <summary>See also:</summary>
+    <ul>
+      <li><a href="https://getbootstrap.com/docs/5.3/components/spinners/">BS Spinners</a></li>
+      <li><a href="https://getbootstrap.com/docs/5.3/components/buttons/">BS Buttons</a></li>
+    </ul>
+  </details>
+
+  <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

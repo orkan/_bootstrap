@@ -17,6 +17,14 @@
   /* background-color: #fff9db; */
 }
 
+.theme-switch {
+  padding: 0;
+  color: var(--bs-dark-text-emphasis);
+}
+.theme-switch .form-check-input {
+  margin: 5px 0;
+}
+
 /*
  * Extract some BS classes to later join in custom CSS classes.
  * https://getbootstrap.com/docs/5.3/utilities/api/

@@ -10,8 +10,6 @@
 	"settings": {
 		"livePreview.customExternalBrowser": "Firefox",
 		"livePreview.autoRefreshPreview": "Never",
-		"livePreview.portNumber": 7777,
-		"livePreview.openPreviewTarget": "External Browser",
-		"livePreview.tasks.runTaskWithExternalPreview": true
+		"livePreview.portNumber": 7777
 	}
 }

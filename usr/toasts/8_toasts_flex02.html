@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <title>02. Toasts aligment with flex</title>
+</head>
+
+<body>
+  <style>
+    body {
+      position: relative;
+      margin: auto;
+      padding: 1rem;
+      max-width: 720px;
+      height: 100vh;
+      background-color: var(--bs-dark-bg-subtle);
+      border: 1px solid white;
+    }
+    .toast-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      border: 2px solid lime;
+    }
+    .toast-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      border: 1px dashed black;
+    }
+    .toast-flexbox > .toast {
+      flex: 0 0 auto;
+    }
+    </style>
+
+  <h2 class="display-5">
+    <a href="https://getbootstrap.com/docs/5.3/components/toasts/">Toasts</a> -
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Flexbox</a>
+  </h2>
+
+  <p class="text-muted">
+      Flex: row-reverse, end, wrap.
+  </p>
+
+  <div class="toast-container">
+    <div class="toast-flexbox">
+
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto" role="header">Toast 5</strong>
+          <small class="text-body-secondary" role="time">00:00:05</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" role="body">Testing #5...</div>
+      </div>
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto" role="header">Toast 4</strong>
+          <small class="text-body-secondary" role="time">00:00:04</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" role="body">Testing #4...</div>
+      </div>
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto" role="header">Toast 3</strong>
+          <small class="text-body-secondary" role="time">00:00:03</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" role="body">Testing #3...</div>
+      </div>
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto" role="header">Toast 2</strong>
+          <small class="text-body-secondary" role="time">00:00:02</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" role="body">Testing #2...</div>
+      </div>
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto" role="header">Toast 1</strong>
+          <small class="text-body-secondary" role="time">00:00:01</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" role="body">Testing #1...</div>
+      </div>
+
+      <!-- .toast-flexbox -->
+      <!-- .toast-container -->
+    </div>
+  </div>
+
+
+  <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

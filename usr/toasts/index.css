@@ -1,0 +1,28 @@
+body {
+  position: relative;
+}
+
+/* body area overlay */
+.toast-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toast-flexbox {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  /* justify-content: end; */
+  gap: .25rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Fix: justify-content: end; */
+.toast-flexbox :first-child {
+  margin-top: auto;
+}

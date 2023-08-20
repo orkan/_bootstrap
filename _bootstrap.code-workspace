@@ -9,7 +9,9 @@
 	],
 	"settings": {
 		"livePreview.customExternalBrowser": "Firefox",
-		"livePreview.autoRefreshPreview": "On Changes to Saved Files",
-		"livePreview.portNumber": 7777
+		"livePreview.autoRefreshPreview": "Never",
+		"livePreview.portNumber": 7777,
+		"livePreview.openPreviewTarget": "External Browser",
+		"livePreview.tasks.runTaskWithExternalPreview": true
 	}
 }

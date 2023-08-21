@@ -3,13 +3,14 @@ window.ork = { toasts: [], next: 0, debug: true };
 /**
  * Create new Toast object and DOM element.
  */
-function showToast() {
-  const _toast = document.getElementById("_toast"),
+function showToast(id) {
+  const _toast = document.getElementById(id),
     _parent = _toast.parentElement,
     domToast = _toast.cloneNode(true);
 
   // Generate new unique DOM id
-  domToast.id = new Date().valueOf();
+  ork.next++;
+  domToast.id = `${id}-${ork.next}`;
 
   const data = getFormData();
   const objToast = new bootstrap.Toast(domToast, data.toast);
@@ -38,8 +39,6 @@ function showToast() {
  * Get all user values.
  */
 function getFormData() {
-  ork.next++;
-
   let out = {
     head: `Title #${ork.next}`,
     date: new Date().toLocaleTimeString(),

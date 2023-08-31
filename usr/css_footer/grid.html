@@ -4,40 +4,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <title>2. Grid - sticky footer</title>
   </head>
   <body>
     <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
       .wrapper {
         display: grid;
         grid-template-rows: auto 1fr auto;
         min-height: 100%;
       }
     </style>
-    
+
     <div class="wrapper">
       <header class="page-header">This is the header</header>
       <main class="page-body">
         <p>
-          Main page content here, add more if you want to see the footer push
-          down. Main page content here, add more if you want to see the footer
-          push down. Main page content here, add more if you want to see the
-          footer push down. Main page content here, add more if you want to see
-          the footer push down. Main page content here, add more if you want to
-          see the footer push down. Main page content here, add more if you want
-          to see the footer push down. Main page content here, add more if you
-          want to see the footer push down. Main page content here, add more if
-          you want to see the footer push down. Main page content here, add more
-          if you want to see the footer push down. Main page content here, add
-          more if you want to see the footer push down. Main page content here,
-          add more if you want to see the footer push down. Main page content
-          here, add more if you want to see the footer push down. Main page
-          content here, add more if you want to see the footer push down. Main
-          page content here, add more if you want to see the footer push down.
-          Main page content here, add more if you want to see the footer push
-          down.
+          Main page content here, add more if you want to see the footer push down. Main page
+          content here, add more if you want to see the footer push down. Main page content here,
+          add more if you want to see the footer push down. Main page content here, add more if you
+          want to see the footer push down. Main page content here, add more if you want to see the
+          footer push down. Main page content here, add more if you want to see the footer push
+          down. Main page content here, add more if you want to see the footer push down. Main page
+          content here, add more if you want to see the footer push down. Main page content here,
+          add more if you want to see the footer push down. Main page content here, add more if you
+          want to see the footer push down. Main page content here, add more if you want to see the
+          footer push down. Main page content here, add more if you want to see the footer push
+          down. Main page content here, add more if you want to see the footer push down. Main page
+          content here, add more if you want to see the footer push down. Main page content here,
+          add more if you want to see the footer push down.
         </p>
       </main>
       <footer class="page-footer">Sticky footer</footer>

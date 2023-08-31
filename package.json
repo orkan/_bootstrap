@@ -1,6 +1,10 @@
 {
+  "prettier": "@orkans/prettier-config",
   "dependencies": {
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5"
+  },
+  "devDependencies": {
+    "@orkans/prettier-config": "^2.0.0"
   }
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Bg - border inset</title>
+  </head>
+
+  <body>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        margin: auto;
+        padding: 1rem;
+        width: 50%;
+        --bg-color1: #cfd8dc;
+        --bg-color2: #e1e1e1;
+        --bg-color3: #175b70;
+        --bg-size: 100px;
+        /* prettier-ignore */
+        background: 
+          linear-gradient(135deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+          linear-gradient(225deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+          linear-gradient(315deg, var(--bg-color1) 25%, transparent 25%),
+          linear-gradient( 45deg, var(--bg-color1) 25%, transparent 25%);
+        background-size: var(--bg-size) var(--bg-size);
+        background-color: var(--bg-color2);
+        background: var(--bg-color3);
+      }
+      .pegs {
+        --border-rgb: 128,128,128,.5;
+        margin-bottom: 1rem;
+        display: flex;
+        /* border: 1px dashed black; */
+      }
+      .pegs > * {
+        text-align: center;
+        flex: 1 0 20px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1px dotted red;
+        border: .5rem inset rgba(0,0,0,.4);
+        position: relative;
+        background-color: rgba(0,0,0,.2);
+      }
+      .pegs-call > * {
+        border-width: .4rem;
+        /* border-style: outset; */
+      }
+      .pegs-call .peg {
+        border-width: 0 !important;
+        /* border-style: inset; */
+        /* box-shadow: 0 3px 7px rgb(255 255 255 / .5) !important; */
+      }
+      .peg-0 {
+        border-width: 0 !important;
+      }
+      .pegs-code {
+        width: 75%;
+        gap: 1rem;
+      }
+      .pegs-call {
+        width: 45%;
+        gap: 0.25rem;
+      }
+      .peg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background: 
+        /* radial-gradient(circle at 20% 20%, rgba(0 0 0 / .5), transparent 80% ), */
+        /* radial-gradient(circle at 70% 70%, white, transparent 30% ) */
+        /* linear-gradient(to right bottom, rgba(0 0 0 / .2) 40%, transparent) */
+        ;
+      }
+      .peg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        border: 0.5em solid transparent;
+        background: 
+        radial-gradient(circle at 75% 75%, rgb(255 255 255 / .3), transparent 50% ) padding-box
+        ;
+        /* filter: blur(5px); */
+      }
+      .peg {
+        /* display: flex; */
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: .5rem outset rgba(0 0 0 / .5);
+        /* box-shadow: 0 3px 7px rgb(0 0 0 / .5); */
+      }
+      .peg-1 {
+        /* filter: blur(2px); */
+        /* background:  */
+        /* radial-gradient(circle at 70% 70%, yellow, transparent 70% ), */
+        /* radial-gradient(circle at top left, black, yellow 70% ) padding-box, */
+        /* linear-gradient(to right bottom, rgba(0 0 0 / .3), transparent), */
+        /* linear-gradient(to right bottom, rgba(0, 0, 0, .5), transparent) padding-box, */
+        /* yellow; */
+        background-color: yellow;
+      }
+      .peg-2 {
+        background-color: green;
+      }
+      .peg-w {
+        background:
+        radial-gradient(circle at 20% 20%, white 50%, black );
+      }
+      .peg-b {
+        background:
+        radial-gradient(circle at 30% 30%, white, black 30% );
+      }
+    </style>
+
+    <div class="pegs pegs-code">
+      <div><div class="peg peg-1">1</div></div>
+      <div><div class="peg peg-2">2</div></div>
+      <div><div class="peg peg-0">0</div></div>
+    </div>
+
+    <div class="pegs pegs-call">
+      <div><div class="peg peg-w">w</div></div>
+      <div><div class="peg peg-b">b</div></div>
+      <div><div class="peg peg-0">0</div></div>
+    </div>
+  </body>
+</html>

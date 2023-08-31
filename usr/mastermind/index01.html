@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>1. Mastermind</title>
+  </head>
+
+  <body class="" style="background-color: var(--bs-dark-bg-subtle)">
+    <style>
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        margin-bottom: 15px;
+      }
+      body > header,
+      body > footer {
+        background-color: #b3b2b2;
+      }
+      body > footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+
+    <header>
+      <p>
+        The HTML height == HEADER + MAIN heigh, but it doesnt include the abstract FOOTER height.
+        Thats why the FOOTER overlaps the bottom of the MAIN by its own height.<br>
+        Solution would be to add FOOTER height to the BODY bottom margin!
+      </p>
+    </header>
+
+    <main class="container-sm">
+      <div class="board2">
+        <div class="board-row2">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>check</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>Page footer</footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

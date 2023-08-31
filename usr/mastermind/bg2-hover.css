@@ -1,0 +1,43 @@
+.pegs-code .peg {
+  cursor: pointer;
+  transition: filter 300ms;
+}
+.pegs-code .peg:hover {
+  filter: drop-shadow(0 0 1em var(--peg-color));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /*
+   * NOTE:
+   * Rotating parent also rotates the child. To keep child in place, 
+   * make it rotate same amount in reverse direction.
+   * Problem here is the border width, which delays the onHover event on child.
+   * It also makes both elements animate unsynced when leaving the hovered area.
+   */
+  .pegs-code .peg > *:hover {
+    animation: spin-peg-inset 0.2s linear forwards;
+  }
+  /* !rotate inset element only!
+  .pegs-code .peg:hover {
+    animation: spin-peg-outset .2s linear forwards;
+  } 
+  */
+}
+@keyframes spin-peg-inset {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+/* !rotate inset element only!
+@keyframes spin-peg-outset {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+*/

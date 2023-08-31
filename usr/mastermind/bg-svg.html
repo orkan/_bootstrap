@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Bg - SVG</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        margin: auto;
+        padding: 1rem;
+        width: 50%;
+        --bg-color1: #cfd8dc;
+        --bg-color2: #e1e1e1;
+        --bg-size: 100px;
+        /* prettier-ignore */
+        background: 
+          linear-gradient(135deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+          linear-gradient(225deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+          linear-gradient(315deg, var(--bg-color1) 25%, transparent 25%),
+          linear-gradient( 45deg, var(--bg-color1) 25%, transparent 25%);
+        background-size: var(--bg-size) var(--bg-size);
+        background-color: var(--bg-color2);
+      }
+      .pegs {
+        margin-bottom: 1rem;
+        display: flex;
+        border: 1px dashed black;
+      }
+      .pegs > * {
+        text-align: center;
+        flex: 1 0 20px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1px dotted red;
+      }
+      .pegs-code {
+        width: 75%;
+        gap: 1rem;
+      }
+      .pegs-call {
+        width: 45%;
+        gap: 0.25rem;
+      }
+      .peg {
+        background-image: url(http://localhost:3000/peg.svg);
+        /* background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3ClinearGradient id='gradient1' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='black' /%3E%3Cstop offset='50%25' stop-color='transparent' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E%3ClinearGradient id='gradient2' x1='1' x2='0' y1='1' y2='0' xmlns:xlink='http://www.w3.org/1999/xlink' href='%23gradient1' /%3E%3Ccircle cx='50%25' cy='50%25' r='45%25' fill='none' stroke='url(%23gradient1)' stroke-width='10%25' stroke-opacity='0.9' /%3E%3Ccircle cx='50%25' cy='50%25' r='40%25' fill='var(--peg-color, none)' stroke='none' /%3E%3C/svg%3E%0A"); */
+        background-size: cover;
+        background-position: center;
+      }
+      .peg-1 {
+        --peg-color: yellow;
+      }
+      .svg {
+        --peg-color: none;
+        width: 400px;
+        aspect-ratio: 1 / 1;
+        border: 1px dotted gray;
+        stroke: blue;
+      }
+      .svg-red {
+        /* fill: linear-gradient( 45deg, red, white);
+        fill: green; */
+      }
+      .svg-img {
+        --peg-color: red;
+        background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3ClinearGradient id='gradient1' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='black' /%3E%3Cstop offset='50%25' stop-color='transparent' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E%3ClinearGradient id='gradient2' x1='1' x2='0' y1='1' y2='0' xmlns:xlink='http://www.w3.org/1999/xlink' href='%23gradient1' /%3E%3Ccircle cx='50%25' cy='50%25' r='45%25' fill='none' stroke='url(%23gradient1)' stroke-width='10%25' stroke-opacity='0.9' /%3E%3Ccircle cx='50%25' cy='50%25' r='40%25' fill='var(--peg-color, none)' stroke='none' /%3E%3C/svg%3E%0A"), yellow;
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border-width: 20%;
+      }
+      .svg-yellow {
+        background: yellow ;
+      }
+    </style>
+
+    <div class="pegs pegs-code">
+      <div class="peg peg-1">1</div>
+      <div class="peg peg-0">0</div>
+    </div>
+
+    <div class="pegs pegs-call">
+      <div class="peg peg-w">w</div>
+      <div class="peg peg-b">b</div>
+      <div class="peg peg-0">0</div>
+    </div>
+
+    <!-- <img src="https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27" alt="peg.svg"> -->
+    <!-- <img src="http://localhost:3000/peg.svg" alt="peg.svg" style="--peg-color: yellow;">
+    <img src="http://localhost:3000/peg.svg" alt="peg.svg" style="fill: yellow;"> -->
+
+    <div class="svg-img svg-yellow2" style="width: 200px; aspect-ratio: 1/1"></div>
+
+    <!-- <img src='url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3ClinearGradient id='gradient1' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0%25' stop-color='black' /%3E%3Cstop offset='50%25' stop-color='transparent' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E%3ClinearGradient id='gradient2' x1='1' x2='0' y1='1' y2='0' xmlns:xlink='http://www.w3.org/1999/xlink' href='%23gradient1' /%3E%3Ccircle cx='50%25' cy='50%25' r='45%25' fill='none' stroke='url(%23gradient1)' stroke-width='10%25' stroke-opacity='0.9' /%3E%3Ccircle cx='50%25' cy='50%25' r='40%25' fill='var(--peg-color, none)' stroke='none' /%3E%3C/svg%3E%0A");' alt="peg.svg" style="--peg-color: yellow;"> -->
+
+    <!-- <svg id="circle1" class="svg svg-yellow">
+      <linearGradient id='gradient1' x1="0" x2="1" y1="0" y2="1">
+        <stop offset='0%' stop-color='black'/>
+        <stop offset='50%' stop-color='transparent'/>
+        <stop offset='100%' stop-color='white'/>
+      </linearGradient>
+      <linearGradient id="gradient2" x1="1" x2="0" y1="1" y2="0"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        href="#gradient1" 
+      />
+      <circle cx="50%" cy="50%" r="45%" fill='none' stroke='url(#gradient1)' stroke-width="10%" stroke-opacity="0.9" />
+      <circle cx="50%" cy="50%" r="40%" fill='var(--peg-color)' stroke="transparent" />
+    </svg> -->
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.board {
+  padding: 1em;
+  min-width: 450px;
+  border-radius: 5px;
+  border: 2px solid #f76707;
+  background-color: #fff4e6;
+}
+.board-row {
+  display: flex; /* needed for aligning the items */
+  gap: 5px;
+}
+.board-row > div {
+  aspect-ratio: 1 / 1;
+  display: flex; /* needed for aligning the contents */
+  flex: 1; /* control item size: grow, shrink, base */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 1em;
+  color: #d9480f;
+  border-radius: 5px;
+  border: 2px solid #ffa94d;
+  background-color: #fad29e;
+}

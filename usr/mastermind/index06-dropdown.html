@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>6. Mastermind - dropdown</title>
+  </head>
+
+  <body class="container-sm">
+    <style>
+      header,
+      footer {
+        background-color: gray;
+      }
+      .pattern {
+        display: flex;
+      }
+      .pattern > * {
+        display: flex;
+        flex: 1 0 80px;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+      .pegs > * {
+        float: left;
+        width: 33%;
+        min-width: 80px;
+        max-width: 200px;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+      .dropdown-menu {
+        width: 66vw;
+      }
+      .pegs {
+        /* width: 50vw; */
+      }
+    </style>
+
+    <header class="mb-2">Page header</header>
+
+    <main class="board">
+      <section class="mb-2">
+        <div class="pattern">
+
+          <div class="code dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">1</button>
+            <div class="pegs dropdown-menu" style="--bs-dropdown-padding-x: 0.5rem; ">
+                <div class="">choose 1</div>
+                <div class="">choose 2</div>
+                <div class="">choose 3</div>
+                <div class="">choose 4</div>
+                <div class="">choose 5</div>
+                <div class="">choose 6</div>
+            </div>
+          </div>
+
+          <div class="code">2</div>
+          <div class="code">3</div>
+          <div class="code">4</div>
+          
+
+          <!-- <div class="pegs row row-cols-auto g-0 gap-1">
+            <div class="col-6 col-lg-2">choose 1</div>
+            <div class="col-6 col-lg-2">choose 2</div>
+            <div class="col-6 col-lg-2">choose 3</div>
+            <div class="col-6 col-lg-2">choose 4</div>
+            <div class="col-6 col-lg-2">choose 5</div>
+            <div class="col-6 col-lg-2">choose 6</div>
+          </div> -->
+
+          <div class="code">
+            <button class="btn btn-secondary" type="button">check</button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>Page footer</footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

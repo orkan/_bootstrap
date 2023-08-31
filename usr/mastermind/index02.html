@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>2. Mastermind</title>
+  </head>
+
+  <body style="background-color: var(--bs-dark-bg-subtle)">
+    <style>
+      html {
+        position: relative;
+        height: 100%;
+      }
+      body > * {
+        /* zero padding on continer and add it separately for each element - see footer position */
+        padding: 1em;
+      }
+      header {
+        background-color: gray;
+      }
+      footer {
+        /* fixed position does not scroll horizontally! */
+        /* absolute position sticks with vertival scrolling! */
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 0;
+        width: 100%;
+      }
+      .board {
+        min-width: 450px;
+      }
+      .board-row {
+        display: flex; /* needed for aligning the items */
+        gap: 5px;
+      }
+      .board-row > div {
+        aspect-ratio: 1 / 1;
+        display: flex; /* needed for aligning the contents */
+        flex: 1; /* control item size: grow, shrink, base */
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+    </style>
+
+    <header>Page header</header>
+
+    <main>
+      <div class="board">
+        <div class="board-row">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>check</div>
+        </div>
+        <div class="board-row">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>check</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="board">
+        <div class="board-row">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>check</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

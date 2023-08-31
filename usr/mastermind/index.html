@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>Mastermind</title>
+  </head>
+
+  <body class="container-sm">
+    <style>
+      body {
+        min-width: 400px;
+        /* background-color: #3a6c94; */
+
+        --stripe: #cfd8dc;
+        --bg: #e1e1e1;
+
+        background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+          linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+          linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+          linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+        background-size: 100px 100px;
+        background-color: var(--stripe);
+      }
+      header,
+      footer {
+        background-color: gray;
+      }
+      /* 
+      .peg-color-1 {
+        background-color: yellow !important;
+        border-color: rgb(223, 223, 4) !important;
+      }
+      .peg-color-2 {
+        background-color: blue !important;
+        border-color: rgb(3, 3, 212) !important;
+      }
+      .peg-color-3 {
+        border-color: rgb(121, 32, 32) !important;
+        background-color: brown !important;
+      }
+      .peg-color-4 {
+        border-color: rgb(1, 80, 1) !important;
+        background-color: green !important;
+      }
+      .peg-color-5 {
+        border-color: rgb(202, 0, 0) !important;
+        background-color: red !important;
+      }
+      .peg-color-6 {
+        border-color: rgb(185, 102, 185) !important;
+        background-color: violet !important;
+      } */
+
+      .pegs {
+        display: flex;
+        flex: 1;
+      }
+      .peg {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        /* border: 4px solid gray; */
+        border: 4px solid radial-gradient(circle at 70% 70%, transparent, black);
+        background: radial-gradient(circle at 30% 30%, transparent, black);
+      }
+      .pegs-code {
+        flex-grow: var(--pegs-code-items);
+        flex-wrap: nowrap;
+        align-items: end;
+      }
+      .pegs-call {
+        flex-grow: 1;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: start;
+      }
+      .pegs-call > .peg {
+        flex: 0 1 50%;
+        /* border: 10px solid #203f5f; */
+        /* background: radial-gradient(circle at 70% 70%, white, black); */
+      }
+    </style>
+
+    <header class="mb-2">Page header</header>
+
+    <main class="board">
+      <section class="mb-2">
+        <div class="pegs">
+          <div class="pegs pegs-code" style="--pegs-code-items: 4">
+            <div class="peg peg-color-2">1</div>
+            <div class="peg peg-color-0">2</div>
+            <div class="peg peg-color-1">3</div>
+            <div class="peg peg-color-3">4</div>
+            <!-- 
+              <div class="peg peg-color-4">5</div>
+              <div class="peg peg-color-6">6</div>
+              <div class="peg peg-color-5">7</div>
+            -->
+          </div>
+          <div class="pegs pegs-call">
+            <div class="peg peg-white">1</div>
+            <div class="peg peg-black">2</div>
+            <div class="peg">3</div>
+            <div class="peg">4</div>
+            <!-- 
+              <div class="peg">5</div>
+              <div class="peg">6</div>
+              <div class="peg">7</div>
+             -->
+          </div>
+        </div>
+        <div class="pegs pegs-pick">
+          <div class="peg peg-color-1">1</div>
+          <div class="peg peg-color-2">2</div>
+          <div class="peg peg-color-3">3</div>
+          <div class="peg peg-color-4">4</div>
+          <div class="peg peg-color-5">5</div>
+          <div class="peg peg-color-6">6</div>
+          <div class="peg peg-color-0">0</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Page footer</footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>4. Mastermind</title>
+  </head>
+
+  <body class="container-sm">
+    <style>
+      header,
+      footer {
+        background-color: gray;
+      }
+      .guess,
+      .choose {
+        display: flex;
+      }
+      .guess > *,
+      .choose > * {
+        display: flex;
+        flex: 1 0 60px;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+    </style>
+
+    <header class="mb-2">Page header</header>
+
+    <main class="board">
+      <section class="mb-2">
+        <div class="guess">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>check</div>
+        </div>
+        <div class="choose">
+          <div>choose 1</div>
+          <div>choose 2</div>
+          <div>choose 3</div>
+          <div>choose 4</div>
+          <div>choose 5</div>
+          <div>choose 6</div>
+        </div>
+      </section>
+
+    <footer>Page footer</footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

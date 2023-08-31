@@ -1,0 +1,33 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  padding: 1rem;
+  /* width: 60%; */
+  --bg-color1: #cfd8dc;
+  --bg-color2: #e1e1e1;
+  --bg-color3: #175b70;
+  --bg-size: 100px;
+  /* prettier-ignore */
+  background: 
+    linear-gradient(135deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg-color1) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg-color1) 25%, transparent 25%),
+    linear-gradient( 45deg, var(--bg-color1) 25%, transparent 25%);
+  background-size: var(--bg-size) var(--bg-size);
+  background-color: var(--bg-color2);
+  background: var(--bg-color3);
+}
+.pegs-code {
+  width: 100%;
+  gap: 1rem;
+}
+.pegs-call {
+  width: 20%;
+  gap: 0.25rem;
+}

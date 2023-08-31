@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <title>3. Mastermind</title>
+  </head>
+
+  <body class="container-sm">
+    <style>
+      header,
+      footer {
+        background-color: gray;
+      }
+      body > * {
+        min-width: 450px;
+      }
+      .board-row > table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      .board-row > table.table1 td,
+      .board-row > table.table2 td > div {
+        aspect-ratio: 1 / 1;
+      }
+      .guess > *,
+      .choose > *,
+      .d-flex > *,
+      .row > *,
+      .board-row > ul > li,
+      .board-row > table td {
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+      .board-row > ul {
+        display: table;
+        width: 100%;
+        padding: 0;
+      }
+      .board-row > ul > li {
+        display: table-cell;
+        aspect-ratio: 1 / 1;
+      }
+      .row-guess .col {
+        aspect-ratio: 1 / 1;
+      }
+      .guess,
+      .choose {
+        display: flex;
+      }
+      .guess > *,
+      .choose > * {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+      }
+    </style>
+
+    <header>Page header</header>
+
+    <main class="board">
+      <section class="mb-2">
+        div.flex > div.flex-1:aspect
+        <div class="guess text-center">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>check</div>
+        </div>
+        <div class="choose text-center">
+          <div>choose 1</div>
+          <div>choose 2</div>
+          <div>choose 3</div>
+          <div>choose 4</div>
+          <div>choose 5</div>
+        </div>
+      </section>
+
+      <section class="mb-2">
+        div.row > div.col:aspect - cant center vertically
+        <div class="row row-guess text-center g-0 gap-1">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+          <div class="col">5</div>
+          <div class="col">check</div>
+        </div>
+        <div class="row g-0">
+          <div class="col">choose</div>
+        </div>
+      </section>
+
+      <section class="board-row">
+        ul > li:aspect
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>check</li>
+        </ul>
+      </section>
+
+      <section class="board-row">
+        table td > div:aspect
+        <table class="table2">
+          <tr>
+            <td>
+              <div>1</div>
+            </td>
+            <td>
+              <div>2</div>
+            </td>
+            <td>
+              <div>3</div>
+            </td>
+            <td>
+              <div>4</div>
+            </td>
+            <td>
+              <div>5</div>
+            </td>
+            <td>
+              <div>check</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1</div>
+            </td>
+            <td>
+              <div>2</div>
+            </td>
+            <td>
+              <div>3</div>
+            </td>
+            <td>
+              <div>4</div>
+            </td>
+            <td>
+              <div>5</div>
+            </td>
+            <td>
+              <div>check</div>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="board-row">
+        table td:aspect
+        <table class="table1">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>check</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>check</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>Page footer</footer>
+
+    <!-- <script>window.onload = () => {};</script> -->
+    <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

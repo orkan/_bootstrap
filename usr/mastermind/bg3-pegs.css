@@ -1,0 +1,79 @@
+.pegs {
+  --peg-width: calc(100vw / var(--pegs-items));
+  --border-factor: 0.07;
+  --border-width: calc(var(--peg-width) * var(--border-factor));
+  --border-width-inset: var(--border-width);
+  --border-width-outset: var(--border-width);
+  --shadow-width: calc(var(--border-width) * 2);
+  --bg-empty: rgba(0 0 0 / 0.2);
+  --bg-highlight: radial-gradient(circle at 75% 75%, rgb(255 255 255 / 0.3), transparent 50%)
+    padding-box;
+  --bg-darklight: linear-gradient(to right bottom, rgba(0 0 0 / 0.3), transparent) padding-box;
+  --peg-shadow: 0 0 var(--border-width-inset) rgba(0 0 0 / 0.7);
+  display: flex;
+  margin-bottom: 1rem;
+  row-gap: var(--border-width);
+}
+.peg {
+  position: relative;
+  flex: 1 0 20px;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  border-radius: 50%;
+  border: var(--border-width-inset) inset rgba(0 0 0 / 0.4);
+  /* Tip: dark background also shades the transculent border */
+  background: var(--bg-empty);
+}
+.peg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border-radius: 50%;
+  border: var(--border-width-outset) outset rgba(0 0 0 / 0.5);
+  box-shadow: var(--peg-shadow);
+  /* prettier-ignore */
+  background: 
+    var(--bg-highlight), 
+    var(--bg-darklight), 
+    var(--bg-color, none);
+}
+.pegs-call {
+  --peg-width: calc(100vw / var(--pegs-items) / 2);
+  --border-factor: 0.03;
+  cursor: busy;
+}
+.peg-0 {
+  --border-width-outset: 0;
+  --bg-highlight: none;
+  --bg-empty: none;
+  --peg-shadow: none;
+}
+.peg-1 {
+  --bg-color: Yellow;
+}
+.peg-2 {
+  --bg-color: Lime;
+}
+.peg-3 {
+  --bg-color: Red;
+}
+.peg-4 {
+  --bg-color: Fuchsia;
+}
+.peg-5 {
+  --bg-color: Chocolate;
+}
+.peg-6 {
+  --bg-color: DodgerBlue;
+}
+.peg-w {
+  --bg-darklight: none;
+  --bg-color: radial-gradient(circle at 20% 20%, white 50%, black 80%) border-box;
+}
+.peg-b {
+  --bg-darklight: none;
+  --bg-color: radial-gradient(circle at 30% 30%, white, black 30%) border-box;
+}

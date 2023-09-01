@@ -1,0 +1,30 @@
+.pegs-code > .peg {
+  cursor: pointer;
+  transition: filter 300ms;
+}
+.pegs-code > .peg:hover  {
+  /* 
+  drop-shadow(): drawn under entire element shape (image alpha channel) and mixes with transparency
+  box-shadow: drawn outside of element boundaries without affecting its transparency
+  */
+  filter: drop-shadow(0 0 var(--shadow-width) var(--bg-color));
+  /* 
+  add stronger shadow effect, or use blur-radius + spread-radius:
+  box-shadow: 0 0 30px 3px var(--bg-color);
+  */
+  box-shadow: 0 0 var(--border-width) var(--bg-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pegs-code .peg:hover::after {
+    animation: spin-peg-inset 200ms linear forwards;
+  }
+}
+@keyframes spin-peg-inset {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}

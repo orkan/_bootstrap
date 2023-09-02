@@ -1,7 +1,7 @@
 .pegs {
-  --peg-width: calc(100vw / var(--pegs-items));
-  --border-factor: 0.07;
-  --border-width: calc(var(--peg-width) * var(--border-factor));
+  --peg-width: calc(100vw / var(--peg-count));
+  --border-scale: 7;
+  --border-width: calc(var(--peg-width) * ( var(--border-scale) / 100 ));
   --border-width-inset: var(--border-width);
   --border-width-outset: var(--border-width);
   --shadow-width: calc(var(--border-width) * 2);
@@ -11,12 +11,11 @@
   --bg-darklight: linear-gradient(to right bottom, rgba(0 0 0 / 0.3), transparent) padding-box;
   --peg-shadow: 0 0 var(--border-width-inset) rgba(0 0 0 / 0.7);
   display: flex;
-  margin-bottom: 1rem;
-  row-gap: var(--border-width);
+  /* row-gap: var(--border-width); */
 }
 .peg {
   position: relative;
-  flex: 1 0 20px;
+  flex: var(--peg-count) 0 20px;
   aspect-ratio: 1 / 1;
   text-align: center;
   border-radius: 50%;
@@ -41,9 +40,8 @@
     var(--bg-color, none);
 }
 .pegs-call {
-  --peg-width: calc(100vw / var(--pegs-items) / 2);
-  --border-factor: 0.03;
-  cursor: busy;
+  --peg-width: calc(100vw / var(--peg-count) / 2);
+  --border-scale: 3;
 }
 .peg-0 {
   --border-width-outset: 0;

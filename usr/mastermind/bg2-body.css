@@ -23,6 +23,9 @@ body {
   background-color: var(--bg-color2);
   background: var(--bg-color3);
 }
+.pegs {  
+  margin-bottom: 1rem;
+}
 .pegs-code {
   width: 100%;
   gap: 1rem;

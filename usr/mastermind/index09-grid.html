@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>9. Grid</title>
+  </head>
+
+  <body>
+    <style>
+      header,
+      footer {
+        background-color: gray;
+      }
+      body > * {
+        min-width: 450px;
+      }
+      .pegs {
+        display: flex;
+        align-items: end;
+      }
+      .pegs > * {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        color: #d9480f;
+        border-radius: 5px;
+        border: 2px solid #ffa94d;
+        background-color: #fad29e;
+      }
+      .board {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .board-row {
+        border: 1px dotted black;
+      }
+      .board-row-code {
+        display: grid;
+        grid-template-columns: repeat(calc(var(--peg-count) + 1), 1fr);
+      }
+      .pegs-code {
+        grid-column: 1 / calc(var(--peg-count) + 1);
+      }
+      .pegs-call {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: calc(5%);
+      }
+    </style>
+    <p>
+      .board: display: flex; flex-direction: column; gap: 1em;<br />
+      .board-row-code: display: grid; grid-template-columns: --peg-count + 1 (code + call)<br />
+      .board-row-pick: ---<br />
+      .pegs-code: grid-column: 1 / --peg-count + 1 (Note: 4 columns == 5 lines!)<br />
+      .pegs-call: display: grid; grid-template-columns: 1fr 1fr; padding: calc(5%);<br />
+    </p>
+
+    <header>Page header</header>
+
+    <main class="board">
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 3">
+          <div class="pegs pegs-code">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div class="pegs pegs-call">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </section>
+        <section class="board-row-pick">
+          <div class="pegs pegs-pick" style="--peg-count: 6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Toggle check -->
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 4">
+          <div class="pegs pegs-code">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+          <div class="pegs pegs-call" id="call4">
+            <div style="display: none">Check</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+        </section>
+        <section class="board-row-pick">
+          <div class="pegs pegs-pick" style="--peg-count: 6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 5">
+          <div class="pegs pegs-code">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+          </div>
+          <div class="pegs pegs-call" id="call5">
+            <div style="display: none">Check</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+          </div>
+        </section>
+        <section class="board-row-pick">
+          <div class="pegs pegs-pick" style="--peg-count: 6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 6">
+          <div class="pegs pegs-code">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+          <div class="pegs pegs-call">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        </section>
+        <section class="board-row-pick">
+          <div class="pegs pegs-pick" style="--peg-count: 6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        </section>
+      </section>
+
+      <style>
+        #call4.pegs-wait > :first-child,
+        #call5.pegs-wait > :first-child {
+          display: inherit !important;
+        }
+        #call4.pegs-wait > :not(:first-child),
+        #call5.pegs-wait > :not(:first-child) {
+          display: none;
+        }
+      </style>
+      <script>
+        window.onload = () => {
+          const call4Classes = document.getElementById('call4').classList;
+          const call5Classes = document.getElementById('call5').classList;
+          setInterval(() => {
+            call4Classes.toggle('pegs-call');
+            call4Classes.toggle('pegs-wait');
+            call5Classes.toggle('pegs-call');
+            call5Classes.toggle('pegs-wait');
+          }, 1800);
+        };
+      </script>
+    </main>
+
+    <footer>Page footer</footer>
+  </body>
+</html>

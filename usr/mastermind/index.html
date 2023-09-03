@@ -1,89 +1,122 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
+<html data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bg3-pegs.css" />
-    <link rel="stylesheet" href="bg3-hover.css" />
+    <link rel="stylesheet" href="index-variables.css" />
+    <link rel="stylesheet" href="index-board.css" />
+    <link rel="stylesheet" href="index-pegs.css" />
+    <link rel="stylesheet" href="index-hover.css" />
     <title>Mastermind</title>
   </head>
 
-  <body class="container-sm">
-    <style>
-      body {
-        min-width: 400px;
-        background: #175b70;
-        /* background: repeating-conic-gradient(#303030 0% 25%, #7a7a7a 0% 50%) 50% / 20px 20px; */
-      }
-      header,
-      footer {
-        background-color: gray;
-      }
-      .pegs-code {
-        --border-scale: 5;
-        flex-grow: calc(var(--peg-count) * 40);
-        flex-wrap: nowrap;
-        align-items: end;
-        gap: .2em;
-      }
-      .pegs-call {
-        --border-scale: 3;
-        flex-grow: 1;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: start;
-        gap: 0;
-        padding: 1em;
-      }
-      .pegs-call > .peg {
-        flex: 0 1 50%;
-      }
-    </style>
+  <body class="container-sm" style="min-width: 576px">
+    <style></style>
+    <!-- Theme mode -->
+    <!-- prettier-ignore -->
+    <div class="m-2 text-center">
+      <input type="radio" class="btn-check" name="theme" id="theme-light"
+        onClick="document.documentElement.setAttribute('data-bs-theme', 'light')" />
+      <label class="btn" for="theme-light">Light</label>
+      <input type="radio" class="btn-check" name="theme" id="theme-dark"
+        onClick="document.documentElement.setAttribute('data-bs-theme', 'dark')" checked />
+      <label class="btn" for="theme-dark">Dark</label>
+    </div>
 
-    <header class="mb-2">Page header</header>
+    <header class="alert alert-info m-0">
+      Page header 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    </header>
 
     <main class="board">
-      <section class="mb-2">
-        <section class="pegs">
-          <div class="pegs pegs-code" style="--peg-count: 4">
-            <div class="peg peg-2">1</div>
-            <div class="peg peg-0">2</div>
-            <div class="peg peg-1">3</div>
-            <div class="peg peg-3">4</div>
-            <!-- 
-              <div class="peg peg-4">5</div>
-              <div class="peg peg-6">6</div>
-              <div class="peg peg-5">7</div>
-            -->
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 4">
+          <div class="pegs pegs-code">
+            <div class="peg peg-3"></div>
+            <div class="peg peg-6"></div>
+            <div class="peg peg-1"></div>
+            <div class="peg peg-1"></div>
           </div>
-          <div class="pegs pegs-call" style="--peg-count: 2">
-            <div class="peg peg-w">1</div>
-            <div class="peg peg-b">2</div>
-            <div class="peg peg-0">3</div>
-            <div class="peg peg-0">4</div>
-            <!-- 
-              <div class="peg peg-0">5</div>
-              <div class="peg peg-0">6</div>
-              <div class="peg peg-0">7</div>
-             -->
+          <div class="pegs pegs-call">
+            <div class="peg peg-b"></div>
+            <div class="peg peg-w"></div>
+            <div class="peg peg-w"></div>
+            <div class="peg peg-b"></div>
           </div>
         </section>
-        <section class="pegs pegs-pick" style="--peg-count: 6">
-          <div class="peg peg-1">1</div>
-          <div class="peg peg-2">2</div>
-          <div class="peg peg-3">3</div>
-          <div class="peg peg-4">4</div>
-          <div class="peg peg-5">5</div>
-          <div class="peg peg-6">6</div>
-          <!-- <div class="peg peg-0">0</div> -->
+      </section>
+
+      <hr />
+
+      <section class="board-row active">
+        <section class="board-row-code" style="--peg-count: 4">
+          <div class="pegs pegs-code">
+            <div class="peg peg-4" tabindex="0"></div>
+            <div class="peg peg-1" tabindex="0"></div>
+            <div class="peg peg-5" tabindex="0"></div>
+            <div class="peg peg-2" tabindex="0"></div>
+          </div>
+          <div class="pegs pegs-wait">
+            <button class="btn btn-outline-info">Check</button>
+            <!-- <button class="btn btn-outline-info" disabled>Check</button> -->
+          </div>
+        </section>
+        <section class="board-row-pick" style="--peg-count: 7">
+          <div class="pegs pegs-pick" hidden>
+            <div class="peg peg-1" tabindex="0"></div>
+            <div class="peg peg-2" tabindex="0"></div>
+            <div class="peg peg-3" tabindex="0"></div>
+            <div class="peg peg-4" tabindex="0"></div>
+            <div class="peg peg-5" tabindex="0"></div>
+            <div class="peg peg-6" tabindex="0"></div>
+            <div class="peg peg-0" tabindex="0"></div>
+          </div>
+        </section>
+      </section>
+
+      <hr />
+
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 4">
+          <div class="pegs pegs-code">
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+          </div>
+          <div class="pegs pegs-call">
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+          </div>
+        </section>
+      </section>
+
+      <hr />
+
+      <section class="board-row">
+        <section class="board-row-code" style="--peg-count: 4">
+          <div class="pegs pegs-code">
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+          </div>
+          <div class="pegs pegs-call">
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+            <div class="peg peg-0"></div>
+          </div>
         </section>
       </section>
     </main>
 
-    <footer>Page footer</footer>
+    <footer class="alert alert-info">Page footer</footer>
 
+    <script src="index.js"></script>
     <!-- <script>window.onload = () => {};</script> -->
     <!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
   </body>

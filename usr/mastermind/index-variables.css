@@ -1,0 +1,34 @@
+:root {
+  --bs-body-bg: #fff;
+}
+[data-bs-theme='light'] {
+  --peg-shadow: none;
+}
+[data-bs-theme='dark'] {
+  --bs-body-bg: #175b70;
+  --bg-color-5: Gainsboro;
+  /* --bg-color-b: radial-gradient(circle at 30% 30%, white, navy 30%) border-box; */
+}
+.btn {
+  --bs-btn-font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  :root {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    font-size: 1.67rem;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1.98rem;
+  }
+}
+@media (min-width: 1400px) {
+  :root {
+    font-size: 2.3rem;
+  }
+}

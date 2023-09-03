@@ -1,0 +1,26 @@
+.active .pegs-pick .peg,
+.active .pegs-code .peg {
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+.active .pegs-code .peg:focus,
+.active .pegs-code .peg:hover,
+.active .pegs-pick .peg:hover {
+  filter: drop-shadow(0 0 var(--shadow-width, calc(var(--border-width) * 2)) var(--bg-color));
+  box-shadow: 0 0 var(--border-width) var(--bg-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .active .pegs-code .peg:focus::after {
+    animation: spin-peg-inset 200ms linear forwards;
+  }
+}
+@keyframes spin-peg-inset {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}

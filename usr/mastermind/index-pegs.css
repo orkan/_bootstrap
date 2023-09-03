@@ -1,0 +1,70 @@
+.pegs {
+  --border-scale: 1;
+  --border-scale-inset: 1;
+  --border-scale-outset: 1;
+  --border-width: calc(3em * var(--border-scale) / var(--peg-count));
+  --border-width-inset: calc(var(--border-width) * var(--border-scale-inset));
+  --border-width-outset: calc(var(--border-width) * var(--border-scale-outset));
+}
+.pegs-code {
+  --border-scale: 0.9;
+}
+.pegs-call {
+  --border-scale: 0.3;
+}
+.peg {
+  position: relative;
+  border-radius: 50%;
+  border: var(--border-width-inset) inset rgba(0 0 0 / 0.4);
+  background: var(--bg-empty, rgba(0 0 0 / 0.2));
+}
+.peg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border-radius: 50%;
+  border: var(--border-width-outset) outset rgba(0 0 0 / 0.5);
+  box-shadow: var(--peg-shadow, 0 0 var(--border-width-inset) rgba(0 0 0 / 0.7));
+  /* prettier-ignore */
+  background: 
+    var(--bg-highlight, radial-gradient(circle at 75% 75%, rgb(255 255 255 / 0.3), transparent 50%)
+    padding-box), 
+    var(--bg-darklight, linear-gradient(to right bottom, rgba(0 0 0 / 0.3), transparent) padding-box), 
+    var(--bg-color, none);
+}
+.peg-0 {
+  --border-width-outset: 0;
+  --bg-highlight: none;
+  --bg-empty: none;
+  --peg-shadow: none;
+}
+.peg-1 {
+  --bg-color: var(--bg-color-1, Yellow);
+}
+.peg-2 {
+  --bg-color: var(--bg-color-2, Lime);
+}
+.peg-3 {
+  --bg-color: var(--bg-color-3, Red);
+}
+.peg-4 {
+  --bg-color: var(--bg-color-4, Fuchsia);
+}
+.peg-5 {
+  --bg-color: var(--bg-color-5, Chocolate);
+}
+.peg-6 {
+  --bg-color: var(--bg-color-6, DodgerBlue);
+}
+/* prettier-ignore */
+.peg-w {
+  --bg-darklight: none;
+  --bg-color: var(--bg-color-w, radial-gradient(circle at 20% 20%, white 50%, black 80%) border-box);
+}
+.peg-b {
+  --bg-darklight: none;
+  --bg-color: var(--bg-color-b, radial-gradient(circle at 30% 30%, white, black 30%) border-box);
+}

@@ -1,13 +1,23 @@
 .pegs {
-  --border-scale: 1;
-  --border-scale-inset: 1;
-  --border-scale-outset: 1;
-  --border-width: calc(3em * var(--border-scale) / var(--peg-count));
-  --border-width-inset: calc(var(--border-width) * var(--border-scale-inset));
-  --border-width-outset: calc(var(--border-width) * var(--border-scale-outset));
+  --border-width: calc(3rem * var(--border-scale, 1) / var(--peg-count));
+  --border-width-inset: calc(var(--border-width) * var(--border-scale-inset, 1));
+  --border-width-outset: calc(var(--border-width) * var(--border-scale-outset, 1));
 }
+.pegs-pick,
 .pegs-code {
   --border-scale: 0.9;
+}
+@media (max-width: 500px) {
+  .pegs-pick,
+  .pegs-code {
+    --border-scale: 0.7;
+  }
+}
+@media (max-width: 400px) {
+  .pegs-pick,
+  .pegs-code {
+    --border-scale: 0.5;
+  }
 }
 .pegs-call {
   --border-scale: 0.3;

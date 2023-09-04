@@ -1,6 +1,5 @@
 .active .pegs-pick .peg,
 .active .pegs-code .peg {
-  cursor: pointer;
   transition: filter 300ms;
 }
 

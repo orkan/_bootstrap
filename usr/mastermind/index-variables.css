@@ -10,7 +10,11 @@
   /* --bg-color-b: radial-gradient(circle at 30% 30%, white, navy 30%) border-box; */
 }
 .btn {
-  --bs-btn-font-size: 0.9em;
+  --bs-btn-font-size: 0.8em;
+  --bs-btn-padding-x: 0.4em;
+}
+.board > hr {
+  margin: .5em 0;
 }
 :root {
   font-size: 16px;

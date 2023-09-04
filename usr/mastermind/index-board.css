@@ -1,14 +1,11 @@
 .board {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin: .5rem 0 1rem;
 }
 .board-row-code {
   display: grid;
   grid-template-columns: repeat(calc(var(--peg-count) + 1), 1fr);
-}
-.board-row-pick {
-  margin-top: 0.5em;
 }
 .pegs {
   display: flex;
@@ -16,23 +13,24 @@
 }
 .pegs-code {
   grid-column: 1 / calc(var(--peg-count) + 1);
-  gap: 0.5em;
+  gap: 0.25em;
   z-index: 1;
 }
 .pegs-call {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
-  padding: 0.5em;
   gap: 0;
+  padding: 0.3em;
 }
 .pegs-wait {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.5em;
+  padding: 0.3em;
 }
 .pegs-pick {
-  gap: 0.3em;
+  gap: 0.2em;
+  padding-top: 0.5em;
   z-index: 0;
 }
 .peg {

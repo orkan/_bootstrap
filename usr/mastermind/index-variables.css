@@ -2,10 +2,13 @@
   --bs-body-bg: #fff;
 }
 [data-bs-theme='light'] {
+  --bg-empty: none;
   --peg-shadow: none;
+  --border-color-inset: rgba(0 0 0 / 0.25);
 }
 [data-bs-theme='dark'] {
   --bs-body-bg: #175b70;
+  /* --bs-body-bg: var(--bs-info-border-subtle); */
   --bg-color-5: Gainsboro;
   /* --bg-color-b: radial-gradient(circle at 30% 30%, white, navy 30%) border-box; */
 }

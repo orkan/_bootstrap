@@ -25,7 +25,7 @@
 .peg {
   position: relative;
   border-radius: 50%;
-  border: var(--border-width-inset) inset rgba(0 0 0 / 0.4);
+  border: var(--border-width-inset) inset var(--border-color-inset, rgba(0 0 0 / 0.4));
   background: var(--bg-empty, rgba(0 0 0 / 0.2));
 }
 .peg::after {
@@ -36,7 +36,7 @@
   bottom: 0;
   content: '';
   border-radius: 50%;
-  border: var(--border-width-outset) outset rgba(0 0 0 / 0.5);
+  border: var(--border-width-outset) outset var(--border-color-outset, rgba(0 0 0 / 0.5));
   box-shadow: var(--peg-shadow, 0 0 var(--border-width-inset) rgba(0 0 0 / 0.7));
   /* prettier-ignore */
   background: 

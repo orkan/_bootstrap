@@ -3,24 +3,19 @@
 }
 [data-bs-theme='light'] {
   --bs-body-bg-rgb: var(--bs-tertiary-bg-rgb);
-  /* --peg-shadow: 0 0 var(--border-width-inset) rgba(173, 23, 23, 0.925) !important; */
   --border-color-shadow: rgba(0 0 0 / 0.5);
-  /* --peg-shadow: none; */
   --border-color-inset: rgba(255 255 255 / 0.25);
   --border-color-0: rgba(0 0 0 / 0.5);
   --bg-color-w: radial-gradient(circle at 20% 20%, white 50%, black 90%) border-box;
 }
 [data-bs-theme='dark'] {
   --bs-body-bg: #175b70;
-  /* alert info bg */
   --bs-body-bg-rgb: 3, 40, 48;
-  /* --bs-body-bg: var(--bs-info-border-subtle); */
   --bg-color-5: Gainsboro;
   /* --bg-color-b: radial-gradient(circle at 30% 30%, white, navy 30%) border-box; */
 }
 .btn {
   --bs-btn-font-size: 0.8em;
-  --bs-btn-padding-x: 0.4em;
 }
 .board > hr {
   margin: .5em 0;

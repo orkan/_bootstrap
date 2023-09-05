@@ -3,17 +3,15 @@ window.ork = {};
 window.onload = () => {
   ork.codeAll = document.querySelectorAll('.active .pegs-code .peg');
   ork.pickAll = document.querySelectorAll('.active .pegs-pick .peg');
-  ork.pickBox = document.querySelector('.active .pegs-pick');
+  ork.pickRow = document.querySelector('.active .board-row-pick');
 
   ork.codeAll.forEach((element) => {
     element.addEventListener('focus', (event) => {
       ork.codePeg = event.target; // see: document.activeElement
-      ork.codePeg.focus();
-      ork.pickBox.hidden = false;
-
+      ork.pickRow.style.height = `${ork.pickRow.scrollHeight}px`;
     });
     element.addEventListener('blur', (event) => {
-      ork.pickBox.hidden = true;
+      ork.pickRow.style.height = 0;
     });
   });
 
@@ -23,7 +21,7 @@ window.onload = () => {
    */
   ork.pickAll.forEach((element) => {
     element.addEventListener('mousedown', (event) => {
-        event.preventDefault();
+        // event.preventDefault(); // don't steal focus (keep box open)
         ork.codePeg.className = event.target.className;
     });
   });

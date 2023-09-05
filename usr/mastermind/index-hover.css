@@ -1,15 +1,16 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Code, Pick: outline
+*/
 .active .pegs-pick .peg,
 .active .pegs-code .peg {
   transition: filter 300ms;
 }
-
 .active .pegs-code .peg:focus,
-.active .pegs-code .peg:hover,
-.active .pegs-pick .peg:hover {
+.active .pegs-code .peg:hover {
   filter: drop-shadow(0 0 var(--shadow-width, calc(var(--border-width) * 2)) var(--bg-color));
   box-shadow: 0 0 var(--border-width) var(--border-color, var(--bg-color));
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .active .pegs-code .peg:focus::after {
     animation: spin-peg-inset 200ms linear forwards;
@@ -22,4 +23,22 @@
   to {
     transform: rotate(45deg);
   }
+}
+/**
+ * ----------------------------------------------------------------------------
+ * Pick: slide
+*/
+.active .pegs-pick {
+  gap: 0.2em;
+  /* add padding to remove clipping the shadow because parent has [overflow: hidden] */
+  padding: .3em;
+}
+.active .pegs-pick .peg:hover {
+  box-shadow: 0 0 var(--border-width) var(--border-color, var(--bg-color));
+}
+.active .board-row-pick {
+  /* slide require [overflow: hidden] to compute valid height */
+  transition: height 300ms ease-out;
+  overflow: hidden;
+  height: 0;
 }

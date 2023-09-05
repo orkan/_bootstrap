@@ -14,7 +14,6 @@
 .pegs-code {
   grid-column: 1 / calc(var(--peg-count) + 1);
   gap: 0.25em;
-  z-index: 1;
 }
 .pegs-call {
   display: grid !important;
@@ -27,11 +26,6 @@
   align-items: center;
   justify-content: center;
   padding: 0.3em;
-}
-.pegs-pick {
-  gap: 0.2em;
-  padding-top: 0.5em;
-  z-index: 0;
 }
 .peg {
   flex: var(--peg-count) 0 20px;

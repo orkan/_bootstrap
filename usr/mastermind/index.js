@@ -6,9 +6,11 @@ window.onload = () => {
   ork.pickBox = document.querySelector('.active .pegs-pick');
 
   ork.codeAll.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      ork.codePeg = event.target;
+    element.addEventListener('focus', (event) => {
+      ork.codePeg = event.target; // see: document.activeElement
+      ork.codePeg.focus();
       ork.pickBox.hidden = false;
+
     });
     element.addEventListener('blur', (event) => {
       ork.pickBox.hidden = true;
@@ -21,6 +23,7 @@ window.onload = () => {
    */
   ork.pickAll.forEach((element) => {
     element.addEventListener('mousedown', (event) => {
+        event.preventDefault();
         ork.codePeg.className = event.target.className;
     });
   });

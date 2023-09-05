@@ -3,8 +3,12 @@
 }
 [data-bs-theme='light'] {
   --bs-body-bg-rgb: var(--bs-tertiary-bg-rgb);
-  --peg-shadow: none;
-  --border-color-inset: rgba(0 0 0 / 0.25);
+  /* --peg-shadow: 0 0 var(--border-width-inset) rgba(173, 23, 23, 0.925) !important; */
+  --border-color-shadow: rgba(0 0 0 / 0.5);
+  /* --peg-shadow: none; */
+  --border-color-inset: rgba(255 255 255 / 0.25);
+  --border-color-0: rgba(0 0 0 / 0.5);
+  --bg-color-w: radial-gradient(circle at 20% 20%, white 50%, black 90%) border-box;
 }
 [data-bs-theme='dark'] {
   --bs-body-bg: #175b70;

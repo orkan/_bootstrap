@@ -3,7 +3,6 @@
 }
 [data-bs-theme='light'] {
   --bs-body-bg-rgb: var(--bs-tertiary-bg-rgb);
-  --bg-empty: none;
   --peg-shadow: none;
   --border-color-inset: rgba(0 0 0 / 0.25);
 }

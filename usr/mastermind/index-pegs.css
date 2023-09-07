@@ -1,13 +1,23 @@
 .pegs {
-  --border-scale: 1;
-  --border-scale-inset: 1;
-  --border-scale-outset: 1;
-  --border-width: calc(3em * var(--border-scale) / var(--peg-count));
-  --border-width-inset: calc(var(--border-width) * var(--border-scale-inset));
-  --border-width-outset: calc(var(--border-width) * var(--border-scale-outset));
+  --border-width: calc(3rem * var(--border-scale, 1) / var(--peg-count));
+  --border-width-inset: calc(var(--border-width) * var(--border-scale-inset, 1));
+  --border-width-outset: calc(var(--border-width) * var(--border-scale-outset, 1));
 }
+.pegs-pick,
 .pegs-code {
   --border-scale: 0.9;
+}
+@media (max-width: 500px) {
+  .pegs-pick,
+  .pegs-code {
+    --border-scale: 0.7;
+  }
+}
+@media (max-width: 400px) {
+  .pegs-pick,
+  .pegs-code {
+    --border-scale: 0.5;
+  }
 }
 .pegs-call {
   --border-scale: 0.3;
@@ -15,8 +25,8 @@
 .peg {
   position: relative;
   border-radius: 50%;
-  border: var(--border-width-inset) inset rgba(0 0 0 / 0.4);
-  background: var(--bg-empty, rgba(0 0 0 / 0.2));
+  border: var(--border-width-inset) inset var(--border-color-inset, rgba(0 0 0 / 0.2));
+  background: none;
 }
 .peg::after {
   position: absolute;
@@ -26,20 +36,20 @@
   bottom: 0;
   content: '';
   border-radius: 50%;
-  border: var(--border-width-outset) outset rgba(0 0 0 / 0.5);
-  box-shadow: var(--peg-shadow, 0 0 var(--border-width-inset) rgba(0 0 0 / 0.7));
+  border: var(--border-width-outset) outset var(--border-color-outset, rgba(0 0 0 / 0.5));
+  box-shadow: var(--peg-shadow, 0 0 var(--border-width-inset) var(--border-color-shadow, rgba(0 0 0 / 0.7)));
   /* prettier-ignore */
   background: 
-    var(--bg-highlight, radial-gradient(circle at 75% 75%, rgb(255 255 255 / 0.3), transparent 50%)
+    var(--bg-highlight, radial-gradient(circle at 75% 75%, rgba(255 255 255 / 0.4), transparent 50%)
     padding-box), 
-    var(--bg-darklight, linear-gradient(to right bottom, rgba(0 0 0 / 0.3), transparent) padding-box), 
+    var(--bg-darklight, linear-gradient(to right bottom, rgba(0 0 0 / 0.4), transparent) padding-box), 
     var(--bg-color, none);
 }
 .peg-0 {
   --border-width-outset: 0;
   --bg-highlight: none;
-  --bg-empty: none;
   --peg-shadow: none;
+  --border-color: var(--border-color-0, White);
 }
 .peg-1 {
   --bg-color: var(--bg-color-1, Yellow);

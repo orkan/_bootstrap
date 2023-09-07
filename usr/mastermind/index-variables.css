@@ -2,33 +2,44 @@
   --bs-body-bg: #fff;
 }
 [data-bs-theme='light'] {
-  --peg-shadow: none;
+  --bs-body-bg-rgb: var(--bs-tertiary-bg-rgb);
+  --border-color-shadow: rgba(0 0 0 / 0.5);
+  --border-color-inset: rgba(255 255 255 / 0.25);
+  --border-color-0: rgba(0 0 0 / 0.5);
+  --bg-color-w: radial-gradient(circle at 20% 20%, white 50%, black 90%) border-box;
 }
 [data-bs-theme='dark'] {
   --bs-body-bg: #175b70;
+  --bs-body-bg-rgb: 3, 40, 48;
   --bg-color-5: Gainsboro;
   /* --bg-color-b: radial-gradient(circle at 30% 30%, white, navy 30%) border-box; */
 }
 .btn {
-  --bs-btn-font-size: 0.9em;
+  --bs-btn-font-size: 0.8em;
+}
+.board > hr {
+  margin: .5em 0;
+}
+:root {
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   :root {
-    font-size: 1.25rem;
+    font-size: 21px;
   }
 }
 @media (min-width: 992px) {
   :root {
-    font-size: 1.67rem;
+    font-size: 28px;
   }
 }
 @media (min-width: 1200px) {
   :root {
-    font-size: 1.98rem;
+    font-size: 34px;
   }
 }
 @media (min-width: 1400px) {
   :root {
-    font-size: 2.3rem;
+    font-size: 39px;
   }
 }
